@@ -9,7 +9,7 @@ var db = require("mongojs").connect(process.env.MONGOHQ_URL, collections);
 
 app.use(logfmt.requestLogger());
 
-app.get('/', function(req, res) { });
+app.get('/', function(req, res) {res.send("hello world"); });
 
 app.get('/CFA', function(req, res) {
 	fs.readFile('CFA.html', function(err, html){
@@ -17,7 +17,11 @@ app.get('/CFA', function(req, res) {
 			console.log("error");
 		}
 		else {
-			res.send(html);
+			http.createServer(function(htmlReq, htmlRes){
+				htmlRes.writeHeader(200, {"Content-Type": "text/html"});
+				htmlRes.write(html);
+				htmlRes.end();
+			});
 		}
 	});
 });
