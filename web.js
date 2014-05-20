@@ -20,7 +20,7 @@ app.get('/CFA', function(req, res) {
 		{
 			console.log("else");
 			http.createServer(function(request, response){
-				console.log("http");
+				request.on("data", function(){});
 				response.writeHeader(200, {"Content-Type": "text/html"});
 				response.write(html);
 				response.end();
