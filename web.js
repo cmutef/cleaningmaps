@@ -15,7 +15,18 @@ app.use(logfmt.requestLogger());
 app.get('/', function(req, res) {res.send("hello world"); });
 
 app.get('/CFA', function(req, res) {
-	res.render("CFA.html");
+	fs.readFile("./CFA.html", function(err, html){
+		if (err)
+			console.log("error");
+		else
+		{
+			http.createServer(function(htmlReq, htmlRes){
+				htmlRes.writeHeader(200, {"Content-Type": "text/html"});
+				htmlRes.write(html);
+				htmlRes.end();
+			});
+		}
+	});
 });
 
 var port = Number(process.env.PORT || 5000);
