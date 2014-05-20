@@ -11,14 +11,17 @@ app.get('/', function(req, res) {
 
 var d = new Date();
 
-  db.CFA.save({name:"CFA318-I1", andrew:"test", date:d}, function(err, save){
+for(var i = 1; i < 10; i++)
+{
+  db.CFA.save({name:"CFA323-0"+i, andrew:"test", date:d}, function(err, save){
   	if(err)
   		console.log("error");
   	else
   		console.log("saved");
   });
+}
 
-  db.CFA.save({name:"SCANNER", andrew:"test", date:d}, function(err, save){
+db.CFA.save({name:"CFA323-10", andrew:"test", date:d}, function(err, save){
   	if(err)
   		console.log("error");
   	else
