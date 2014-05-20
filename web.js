@@ -9,17 +9,19 @@ app.use(logfmt.requestLogger());
 
 app.get('/', function(req, res) {
 
-for(var i = 1; i < 21; i++){
-  var n = "";
-  if(i < 10) n = "0";
-  var d = new Date();
-  db.CFA.save({name:"CFA318-"+n+i, andrew:"test", date:d}, function(err, save){
+  db.CFA.save({name:"CFA318-I1", andrew:"test", date:d}, function(err, save){
   	if(err)
   		console.log("error");
   	else
   		console.log("saved");
   });
-}
+
+  db.CFA.save({name:"SCANNER", andrew:"test", date:d}, function(err, save){
+  	if(err)
+  		console.log("error");
+  	else
+  		console.log("saved");
+  });
 
 db.CFA.find(function(err, comp){
   	if(err) 
