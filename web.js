@@ -3,7 +3,7 @@ var express = require("express");
 var logfmt = require("logfmt");
 var app = express();
 var collections = ["CFA", "Baker", "Wean", "Cyert", "Hunt"];
-var db = require("mongojs").connect(MONGOHQ_URL, collections);
+var db = require("mongojs").connect(process.env.MONGOHQ_URL, collections);
 
 app.use(logfmt.requestLogger());
 
