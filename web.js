@@ -2,9 +2,8 @@
 var express = require("express");
 var logfmt = require("logfmt");
 var app = express();
-var databaseUrl = "clusters";
 var collections = ["CFA", "Baker", "Wean", "Cyert", "Hunt"];
-var db = require("mongojs").connect(databaseUrl, collections);
+var db = require("mongojs").connect(MONGOHQ_URL, collections);
 
 app.use(logfmt.requestLogger());
 
