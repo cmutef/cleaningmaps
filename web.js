@@ -16,6 +16,7 @@ app.get('/', function(req, res) {res.send("hello world"); });
 
 app.get('/CFA', function(req, res) {
 	fs.readFile("./CFA.html", function(err, html){
+		console.log("*****");
 		if (err)
 			console.log("error");
 		else
