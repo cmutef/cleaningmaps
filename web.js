@@ -1,11 +1,8 @@
 // web.js
 var express = require("express");
 var logfmt = require("logfmt");
-var querystring = require("querystring");
 var http = require("http");
-var url = require("url");
 var fs = require("fs");
-var path = require("path");
 var app = express();
 var collections = ["CFA", "Baker", "Wean", "Cyert", "Hunt"];
 var db = require("mongojs").connect(process.env.MONGOHQ_URL, collections);
@@ -22,11 +19,11 @@ app.get('/CFA', function(req, res) {
 		else
 		{
 			console.log("else");
-			http.createServer(function(htmlReq, htmlRes){
+			http.createServer(function(request, response){
 				console.log("http");
-				htmlRes.writeHeader(200, {"Content-Type": "text/html"});
-				htmlRes.write(html);
-				htmlRes.end();
+				response.writeHeader(200, {"Content-Type": "text/html"});
+				response.write(html);
+				response.end();
 			});
 		}
 	});
