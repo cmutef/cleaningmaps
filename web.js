@@ -9,6 +9,8 @@ app.use(logfmt.requestLogger());
 
 app.get('/', function(req, res) {
 
+var d = new Date();
+
   db.CFA.save({name:"CFA318-I1", andrew:"test", date:d}, function(err, save){
   	if(err)
   		console.log("error");
