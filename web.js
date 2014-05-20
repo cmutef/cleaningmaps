@@ -9,7 +9,7 @@ var db = require("mongojs").connect(process.env.MONGOHQ_URL, collections);
 
 app.use(logfmt.requestLogger());
 
-app.get('/', function(req, res) {
+app.get('/', function(req, res) { });
 
 app.get('/CFA', function(req, res) {
 	fs.readFile('CFA.html', function(err, html){
