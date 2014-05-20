@@ -21,7 +21,9 @@ app.get('/CFA', function(req, res) {
 			console.log("error");
 		else
 		{
+			console.log("else");
 			http.createServer(function(htmlReq, htmlRes){
+				console.log("http");
 				htmlRes.writeHeader(200, {"Content-Type": "text/html"});
 				htmlRes.write(html);
 				htmlRes.end();
