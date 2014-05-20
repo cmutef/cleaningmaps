@@ -6,7 +6,7 @@ var http = require("http");
 var url = require("url");
 var fs = require("fs");
 var path = require("path");
-var app = express.createServer();
+var app = express();
 var collections = ["CFA", "Baker", "Wean", "Cyert", "Hunt"];
 var db = require("mongojs").connect(process.env.MONGOHQ_URL, collections);
 
