@@ -2,6 +2,8 @@
 var express = require("express");
 var logfmt = require("logfmt");
 var app = express();
+var http = require('http');
+var fs = require('fs');
 var collections = ["CFA", "Baker", "Wean", "Cyert", "Hunt"];
 var db = require("mongojs").connect(process.env.MONGOHQ_URL, collections);
 
@@ -10,65 +12,6 @@ app.use(logfmt.requestLogger());
 app.get('/', function(req, res) {
 
 var d = new Date();
-
-
-  db.CFA.save({name:"CFA-WEB02", andrew:"test", date:d}, function(err, save){
-  	if(err)
-  		console.log("error");
-  	else
-  		console.log("saved");
-  });
-
-    db.CFA.save({name:"CFA-WEB01", andrew:"test", date:d}, function(err, save){
-  	if(err)
-  		console.log("error");
-  	else
-  		console.log("saved");
-  });
-      db.CFA.save({name:"rs-cl-cfa-a", andrew:"test", date:d}, function(err, save){
-  	if(err)
-  		console.log("error");
-  	else
-  		console.log("saved");
-  });
-        db.CFA.save({name:"prn-cl-cfa-1", andrew:"test", date:d}, function(err, save){
-  	if(err)
-  		console.log("error");
-  	else
-  		console.log("saved");
-  });
-          db.CFA.save({name:"prn-cl-cfa-c", andrew:"test", date:d}, function(err, save){
-  	if(err)
-  		console.log("error");
-  	else
-  		console.log("saved");
-  });
-            db.CFA.save({name:"CFA322-CC1", andrew:"test", date:d}, function(err, save){
-  	if(err)
-  		console.log("error");
-  	else
-  		console.log("saved");
-  });
-              db.CFA.save({name:"CFA321-01", andrew:"test", date:d}, function(err, save){
-  	if(err)
-  		console.log("error");
-  	else
-  		console.log("saved");
-  });
-                db.CFA.save({name:"CFA320-CC1", andrew:"test", date:d}, function(err, save){
-  	if(err)
-  		console.log("error");
-  	else
-  		console.log("saved");
-  });
-                  db.CFA.save({name:"CFA320-CC2", andrew:"test", date:d}, function(err, save){
-  	if(err)
-  		console.log("error");
-  	else
-  		console.log("saved");
-  });
-
-
 
 db.CFA.find(function(err, comp){
   	if(err) 
@@ -80,7 +23,14 @@ db.CFA.find(function(err, comp){
 });
 
 app.get('/CFA', function(req, res) {
-	res.send([{name:'CFA1'}, {name:'CFA2'}]);
+	fs.readFile('CFA.html', function(err, html){
+		if(err){
+			console.log("error");
+		}
+		else {
+			res.send(html);
+		}
+	}
 });
 
 var port = Number(process.env.PORT || 5000);
