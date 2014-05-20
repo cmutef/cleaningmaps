@@ -11,17 +11,6 @@ app.use(logfmt.requestLogger());
 
 app.get('/', function(req, res) {
 
-var d = new Date();
-
-db.CFA.find(function(err, comp){
-  	if(err) 
-  	    console.log("error");
-  	else
-  		res.send(comp);
-  });
-
-});
-
 app.get('/CFA', function(req, res) {
 	fs.readFile('CFA.html', function(err, html){
 		if(err){
@@ -30,7 +19,7 @@ app.get('/CFA', function(req, res) {
 		else {
 			res.send(html);
 		}
-	}
+	});
 });
 
 var port = Number(process.env.PORT || 5000);
