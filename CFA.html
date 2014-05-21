@@ -244,7 +244,7 @@ $("td").each(function(index){
 $.get( "/CFAdata", function(data) {
   //console.log(data);
   data.forEach(function(entry){
-  	$("."+entry.name).html(entry.name);
+  	$("#"+entry.name).html(entry.name);
   });
 });
 
