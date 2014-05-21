@@ -1,0 +1,1 @@
+$("td").forEach(function(ele){console.log(ele.attr("id"));});
