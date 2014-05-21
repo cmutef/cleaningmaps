@@ -8,6 +8,8 @@ var collections = ["CFA", "Baker", "Wean", "Cyert", "Hunt"];
 var db = require("mongojs").connect(process.env.MONGOHQ_URL, collections);
 var CFAhtml = fs.readFileSync("CFA.html", 'utf8');
 
+app.use(express.bodyParser());
+
 app.get('/', function(req, res) {res.send("hello world"); });
 
 app.get('/CFA', function(req, res) {
@@ -25,7 +27,7 @@ app.get("/CFAdata", function(req, res){
 });
 
 app.post("/CFAdata", function(req,res){
-	console.log(req.data);
+	console.log(req.body.data);
 });
 
 var port = Number(process.env.PORT || 5000);
