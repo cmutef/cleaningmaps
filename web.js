@@ -7,26 +7,14 @@ var app = express();
 var collections = ["CFA", "Baker", "Wean", "Cyert", "Hunt"];
 var db = require("mongojs").connect(process.env.MONGOHQ_URL, collections);
 
+var CFAhtml = "<html><head></head><body>hello world</body></html>"
+
 app.use(logfmt.requestLogger());
 
 app.get('/', function(req, res) {res.send("hello world"); });
 
 app.get('/CFA', function(req, res) {
-	fs.readFile("./CFA.html", function(err, html){
-		console.log("*****");
-		if (err)
-			console.log("error");
-		else
-		{
-			console.log("else");
-			http.createServer(function(request, response){
-				request.on("data", function(){});
-				response.writeHeader(200, {"Content-Type": "text/html"});
-				response.write(html);
-				response.end();
-			});
-		}
-	});
+    res.send(CFAhtml);
 });
 
 var port = Number(process.env.PORT || 5000);
