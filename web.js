@@ -13,9 +13,6 @@ console.log(CFAhtml);
 app.get('/', function(req, res) {res.send("hello world"); });
 
 app.get('/CFA', function(req, res) {
-	var d = new Date();
-	db.CFA.save({name:"CFA318-SCANNER", andrew:"test", date:d});
-	db.CFA.save({name:"CFA317-SCANNER", andrew:"test", date:d});
     res.send(""+CFAhtml);
 });
 
@@ -27,6 +24,10 @@ app.get("/CFAdata", function(req, res){
 			res.send(docs);
 	});
 
+});
+
+app.post("/CFAdata", function(req,res){
+	console.log(req);
 });
 
 var port = Number(process.env.PORT || 5000);
