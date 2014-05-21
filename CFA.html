@@ -3,11 +3,14 @@
     <style>
         td {
         	width:200px;
-        	height:200px;
+        	height:100px;
         	border: 1px solid black;
         	text-align:center;
         }
         #blank {
+        	border: none;
+        }
+        #title {
         	border: none;
         }
     </style>
@@ -16,7 +19,7 @@
 <h1>hello world</h1>
 <table>
 	<tr>
-		<td>
+		<td id="title">
 			<h3>CFA318</h3>
 		</td>
 	</tr>
@@ -82,7 +85,7 @@
 	</tr>
 	<tr>
 		<td>
-			<h3>CFA323</h3>
+			<h3 id="title">CFA323</h3>
 		</td>
 	</tr>
 	<tr>
@@ -143,7 +146,7 @@
 	</tr>
 	<tr>
 		<td>
-			<h3>CFA317</h3>
+			<h3 id="title">CFA317</h3>
 		</td>
 	</tr>
 	<tr>
@@ -196,7 +199,7 @@
 	</tr>
 	<tr>
 		<td>
-			<h3>CFA319 Hallway</h3>
+			<h3 id="title">CFA319 Hallway</h3>
 		</td>
 	</tr>
 	<tr>
@@ -217,7 +220,7 @@
 	</tr>
 	<tr>
 		<td>
-			<h3>CFA322 Ccon Office</h3>
+			<h3 id="title">CFA322 Ccon Office</h3>
 		</td>
 	</tr>
 	<tr>
@@ -226,7 +229,7 @@
 	</tr>
 	<tr>
 		<td>
-			<h3>CFA321 Sound Room</h3>
+			<h3 id="title">CFA321 Sound Room</h3>
 		</td>
 	</tr>
 	<tr>
@@ -235,7 +238,7 @@
 	</tr>
 		<tr>
 		<td>
-			<h3>CFA320 Multimedia Administrator Office</h3>
+			<h3 id="title">CFA320 Multimedia Administrator Office</h3>
 		</td>
 	</tr>
 	<tr>
@@ -255,7 +258,7 @@ $("td").each(function(index){
 });
 
 $.get( "/CFAdata", function(data) {
-  //console.log(data);
+  console.log(data);
   data.forEach(function(entry){
   	$("#"+entry.name).html(entry.name);
   });
