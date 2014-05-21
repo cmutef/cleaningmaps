@@ -238,11 +238,13 @@
 <script>
 $("td").each(function(index){
 	//console.log($(this).attr("id"));
-	var data = $(this).attr("id");
-	$.ajax({type:"GET",
-        url: "/CFAdata",
-        name: data});
+	//var data = $(this).attr("id");
 });
+
+$.get( "/CFAdata", function( data ) {
+  console.log(data);
+});
+
 </script>
 
 </body>
