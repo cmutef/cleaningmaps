@@ -262,7 +262,11 @@ $.get( "/CFAdata", function(data) {
 
 $("td").each(function(index){
 	$(this).click(function(){
-		$.post({url:"/CFAdata", data:{name: $(this).name}});
+		$.ajax({
+        type: "POST",
+        url: "/CFAdata",
+        data: {name: $(this).name}
+        });
 	});
 });
 
