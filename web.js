@@ -16,6 +16,11 @@ app.get('/CFA', function(req, res) {
     res.send(""+CFAhtml);
 });
 
+app.get("/CFAdata", function(req, res){
+	console.log(req);
+	//res.send(db.CFA.find({name:req}));
+});
+
 var port = Number(process.env.PORT || 5000);
 app.listen(port, function() {
   console.log("Listening on " + port);
