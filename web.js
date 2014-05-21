@@ -6,7 +6,7 @@ var fs = require("fs");
 var app = express();
 var collections = ["CFA", "Baker", "Wean", "Cyert", "Hunt"];
 var db = require("mongojs").connect(process.env.MONGOHQ_URL, collections);
-var CFAhtml = fs.readFileSync("CFA.html");
+var CFAhtml = fs.readFileSync("CFA.html", {encoding:""});
 
 app.get('/', function(req, res) {res.send("hello world"); });
 
