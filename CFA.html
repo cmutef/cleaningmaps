@@ -255,7 +255,7 @@
 $.get( "/CFAdata", function(data) {
   console.log(data);
   data.forEach(function(entry){
-  	$("#"+entry.name).html(entry.name + "\n" + entry.andrew + "\n" + entry.date.toDateString());
+  	$("#"+entry.name).html(entry.name + "\n" + entry.andrew + "\n" + entry.date);
   });
 });
 
