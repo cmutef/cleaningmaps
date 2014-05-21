@@ -13,7 +13,7 @@ console.log(CFAhtml);
 app.get('/', function(req, res) {res.send("hello world"); });
 
 app.get('/CFA', function(req, res) {
-    res.send("'"+CFAhtml+"'");
+    res.send(""+CFAhtml);
 });
 
 var port = Number(process.env.PORT || 5000);
