@@ -16,10 +16,9 @@
     </style>
 </head>
 <body>
-<h1>hello world</h1>
 <table>
 	<tr>
-		<td id="title">
+		<td id="title" colspan="2">
 			<h3>CFA318</h3>
 		</td>
 	</tr>
@@ -84,8 +83,8 @@
 		</td>
 	</tr>
 	<tr>
-		<td>
-			<h3 id="title">CFA323</h3>
+		<td id="title" colspan="2">
+			<h3>CFA323</h3>
 		</td>
 	</tr>
 	<tr>
@@ -145,8 +144,8 @@
 		</td>
 	</tr>
 	<tr>
-		<td>
-			<h3 id="title">CFA317</h3>
+		<td id="title" colspan="2">
+			<h3>CFA317</h3>
 		</td>
 	</tr>
 	<tr>
@@ -198,8 +197,8 @@
         </td>
 	</tr>
 	<tr>
-		<td>
-			<h3 id="title">CFA319 Hallway</h3>
+		<td id="title" colspan="2">
+			<h3>CFA319 Hallway</h3>
 		</td>
 	</tr>
 	<tr>
@@ -219,8 +218,8 @@
 		</td>
 	</tr>
 	<tr>
-		<td>
-			<h3 id="title">CFA322 Ccon Office</h3>
+		<td id="title" colspan="2">
+			<h3>CFA322 Ccon Office</h3>
 		</td>
 	</tr>
 	<tr>
@@ -228,8 +227,8 @@
 		</id>
 	</tr>
 	<tr>
-		<td>
-			<h3 id="title">CFA321 Sound Room</h3>
+		<td id="title" colspan="2">
+			<h3>CFA321 Sound Room</h3>
 		</td>
 	</tr>
 	<tr>
@@ -237,8 +236,8 @@
 		</id>
 	</tr>
 		<tr>
-		<td>
-			<h3 id="title">CFA320 Multimedia Administrator Office</h3>
+		<td id="title" colspan="2">
+			<h3>CFA320 Multimedia Administrator Office</h3>
 		</td>
 	</tr>
 	<tr>
@@ -252,15 +251,11 @@
 <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 
 <script>
-$("td").each(function(index){
-	//console.log($(this).attr("id"));
-	//var data = $(this).attr("id");
-});
 
 $.get( "/CFAdata", function(data) {
   console.log(data);
   data.forEach(function(entry){
-  	$("#"+entry.name).html(entry.name);
+  	$("#"+entry.name).html(entry.name + "\n" + entry.andrew + "\n" + entry.date);
   });
 });
 

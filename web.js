@@ -13,6 +13,9 @@ console.log(CFAhtml);
 app.get('/', function(req, res) {res.send("hello world"); });
 
 app.get('/CFA', function(req, res) {
+	var d = new Date();
+	db.CFA.save({name:"CFA318-SCANNER", andrew:"test", date:d});
+	db.CFA.save({name:"CFA317-SCANNER", andrew:"test", date:d});
     res.send(""+CFAhtml);
 });
 
