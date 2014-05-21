@@ -241,8 +241,11 @@ $("td").each(function(index){
 	//var data = $(this).attr("id");
 });
 
-$.get( "/CFAdata", function( data ) {
-  console.log(data);
+$.get( "/CFAdata", function(data) {
+  //console.log(data);
+  data.forEach(function(entry){
+  	$("."+entry.name).html(entry.name);
+  });
 });
 
 </script>
