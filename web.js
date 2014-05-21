@@ -2,13 +2,14 @@
 var express = require("express");
 var logfmt = require("logfmt");
 var http = require("http");
+var bodyparser = require("body-parser");
 var fs = require("fs");
 var app = express();
 var collections = ["CFA", "Baker", "Wean", "Cyert", "Hunt"];
 var db = require("mongojs").connect(process.env.MONGOHQ_URL, collections);
 var CFAhtml = fs.readFileSync("CFA.html", 'utf8');
 
-app.use(express.bodyParser());
+app.use(bodyparser);
 
 app.get('/', function(req, res) {res.send("hello world"); });
 
