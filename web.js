@@ -25,7 +25,7 @@ app.get("/CFAdata", function(req, res){
 });
 
 app.post("/CFAdata", function(req,res){
-	console.log(req);
+	console.log(req.data);
 });
 
 var port = Number(process.env.PORT || 5000);
