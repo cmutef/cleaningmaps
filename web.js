@@ -13,9 +13,54 @@ app.use(bodyParser());
 app.get('/', function(req, res) {res.send("hello world"); });
 
 app.get('/CFA', function(req, res) {
-	/*db.CFA.find(function(err, docs){
-        res.send(docs);
-	});*/
+	var d = new Date();
+	for(var i = 1; i < 7; i++)
+	{
+		db.CFA.save({
+			name:"BH140E-A"+i,
+			andrew:"test",
+			date:d
+		});
+	}
+	for(var i = 1; i < 7; i++)
+	{
+		db.CFA.save({
+			name:"BH140E-B"+i,
+			andrew:"test",
+			date:d
+		});
+	}
+	for(var i = 1; i < 7; i++)
+	{
+		db.CFA.save({
+			name:"BH140E-C"+i,
+			andrew:"test",
+			date:d
+		});
+	}
+	for(var i = 1; i < 7; i++)
+	{
+		db.CFA.save({
+			name:"BH140E-D"+i,
+			andrew:"test",
+			date:d
+		});
+	}
+	for(var i = 1; i < 7; i++)
+	{
+		db.CFA.save({
+			name:"BH140E-E"+i,
+			andrew:"test",
+			date:d
+		});
+	}
+
+	db.CFA.save({
+			name:"BH140E-I1",
+			andrew:"test",
+			date:d
+		});
+	
 	
     res.send(""+CFAhtml);
 });
