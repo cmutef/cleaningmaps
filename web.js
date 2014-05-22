@@ -8,6 +8,7 @@ var collections = ["CFA", "Baker", "Wean", "Cyert", "Hunt"];
 var db = require("mongojs").connect(process.env.MONGOHQ_URL, collections);
 var CFAhtml = fs.readFileSync("CFA.html", 'utf8');
 var BHhtml = fs.readFileSync("BH.html", 'utf8');
+var Hunthtml = fs.readFileSync("Hunt.html", 'utf8');
 
 app.use(bodyParser());
 
@@ -19,35 +20,11 @@ app.get('/CFA', function(req, res) {
 });
 
 app.get('/BH', function(req, res) {
-	var d = new Date();
-
-for(var i = 1; i < 11; i++){
-	db.CFA.save({
-	name:"HUNTUNIX-"+i,
-	andrew:"test",
-	date:d
-    });
-}
-
-db.CFA.save({
-	name:"prn-cl-hunt-1",
-	andrew:"test",
-	date:d
-	});
-
-db.CFA.save({
-	name:"rs-cl-hunt-a",
-	andrew:"test",
-	date:d
-	});
-
-db.CFA.save({
-	name:"HUNT-CC1",
-	andrew:"test",
-	date:d
-	});
-
     res.send(""+BHhtml);
+});
+
+app.get('/Hunt', function(req, res) {
+    res.send(""+Hunthtml);
 });
 
 app.get("/CFAdata", function(req, res){
