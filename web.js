@@ -13,7 +13,8 @@ app.use(bodyParser());
 app.get('/', function(req, res) {res.send("hello world"); });
 
 app.get('/CFA', function(req, res) {
-    res.send(""+CFAhtml);
+	res.send(db.CFA.find(function(err, docs){}));
+    //res.send(""+CFAhtml);
 });
 
 app.get("/CFAdata", function(req, res){
