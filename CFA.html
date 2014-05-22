@@ -257,6 +257,8 @@ $.get( "/CFAdata", function(data) {
   data.forEach(function(entry){
   	var d = entry.date;
   	$("#"+entry.name).html(entry.name + "\n" + entry.andrew + "\n" + d.substring(0, d.search("T")));
+    console.log(Date.parse(d));
+  	//$("#"+entry.name).css("background-color", "rgb("++")")
   });
 });
 
