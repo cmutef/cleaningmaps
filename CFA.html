@@ -272,8 +272,10 @@ $.get( "/CFAdata", function(data) {
 
 $("td").each(function(index){
 	$(this).click(function(){
-		$.post("/CFAdata", "name="+$(this).attr("id"));
-		location.reload();
+		$.post("/CFAdata", "name="+$(this).attr("id"))
+		.done(function(){
+			location.reload();
+		});
 	});
 });
 

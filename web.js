@@ -32,9 +32,9 @@ app.get("/CFAdata", function(req, res){
 
 app.post("/CFAdata", function(req,res){
 
-var d = new Date();
-
 console.log("HIIII");
+
+var d = new Date();
 
 var arr = db.CFA.find({name:req.body.name});
 console.log(arr);
