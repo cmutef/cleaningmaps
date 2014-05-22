@@ -19,6 +19,19 @@ app.get('/CFA', function(req, res) {
 });
 
 app.get('/BH', function(req, res) {
+	var d = new Date();
+db.save({
+	name:"BH140C-I1",
+	andrew:"test",
+	date:d
+});
+
+db.save({
+	name:"BH140C-10",
+	andrew:"test",
+	date:d
+});
+
 
     res.send(""+BHhtml);
 });
