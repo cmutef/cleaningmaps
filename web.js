@@ -34,6 +34,9 @@ app.post("/CFAdata", function(req,res){
 
 var d = new Date();
 
+var arr = db.CFA.find({name:req.body.name});
+console.log(arr);
+
 db.CFA.update({name:req.body.name}, {$set:{date:d}}, function() {
     // the update is complete
 });
