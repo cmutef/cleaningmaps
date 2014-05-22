@@ -7,15 +7,20 @@ var app = express();
 var collections = ["CFA", "Baker", "Wean", "Cyert", "Hunt"];
 var db = require("mongojs").connect(process.env.MONGOHQ_URL, collections);
 var CFAhtml = fs.readFileSync("CFA.html", 'utf8');
+var BHhtml = fs.readFileSync("BH.html", 'utf8');
 
 app.use(bodyParser());
 
 app.get('/', function(req, res) {res.send("hello world"); });
 
 app.get('/CFA', function(req, res) {
-	var d = new Date();
 
     res.send(""+CFAhtml);
+});
+
+app.get('/BH', function(req, res) {
+
+    res.send(""+BHhtml);
 });
 
 app.get("/CFAdata", function(req, res){
