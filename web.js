@@ -17,7 +17,7 @@ app.get('/CFA', function(req, res) {
 	for(var i = 1; i < 7; i++)
 	{
 		db.CFA.save({
-			name:"BH140E-A"+i,
+			name:"BH140F-A"+i,
 			andrew:"test",
 			date:d
 		});
@@ -25,7 +25,7 @@ app.get('/CFA', function(req, res) {
 	for(var i = 1; i < 7; i++)
 	{
 		db.CFA.save({
-			name:"BH140E-B"+i,
+			name:"BH140F-B"+i,
 			andrew:"test",
 			date:d
 		});
@@ -33,7 +33,7 @@ app.get('/CFA', function(req, res) {
 	for(var i = 1; i < 7; i++)
 	{
 		db.CFA.save({
-			name:"BH140E-C"+i,
+			name:"BH140F-C"+i,
 			andrew:"test",
 			date:d
 		});
@@ -41,7 +41,7 @@ app.get('/CFA', function(req, res) {
 	for(var i = 1; i < 7; i++)
 	{
 		db.CFA.save({
-			name:"BH140E-D"+i,
+			name:"BH140F-D"+i,
 			andrew:"test",
 			date:d
 		});
@@ -49,14 +49,14 @@ app.get('/CFA', function(req, res) {
 	for(var i = 1; i < 7; i++)
 	{
 		db.CFA.save({
-			name:"BH140E-E"+i,
+			name:"BH140F-E"+i,
 			andrew:"test",
 			date:d
 		});
 	}
 
 	db.CFA.save({
-			name:"BH140E-I1",
+			name:"BH140F-I1",
 			andrew:"test",
 			date:d
 		});
