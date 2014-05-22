@@ -265,7 +265,7 @@ $("td").each(function(index){
 		$.ajax({
         type: "POST",
         url: "/CFAdata",
-        data: {name: $(this).name}
+        data: $(this).name
         });
 	});
 });
