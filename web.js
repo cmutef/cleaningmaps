@@ -15,18 +15,6 @@ app.get('/', function(req, res) {res.send("hello world"); });
 app.get('/CFA', function(req, res) {
 	var d = new Date();
 
-for(var i = 1; i < 21; i++)
-{
-	var n = "";
-	if(i < 10) n = "0";
-	db.CFA.save({
-			name:"BH140C-"+n+i,
-			andrew:"test",
-			date:d
-		});
-}
-	
-
     res.send(""+CFAhtml);
 });
 
