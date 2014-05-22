@@ -27,13 +27,14 @@ app.get("/CFAdata", function(req, res){
 });
 
 app.post("/CFAdata", function(req,res){
-	db.CFA.findAndModify({
-		query: {name: req.body.name},
-		update: {$set: {date:new Date()}}
-	}, function(err, doc, lastErrorObject) {
-		
-	}
-	});
+
+db.mycollection.findAndModify({
+    query: { name: req.body.name },
+    update: { $set: { date:new Date() } },
+    new: true
+}, function(err, doc, lastErrorObject) {
+    
+});
 
 	
 });
