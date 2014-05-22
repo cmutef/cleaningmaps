@@ -20,7 +20,10 @@ app.get('/CFA', function(req, res) {
 });
 
 app.get('/BH', function(req, res) {
-    res.send(""+BHhtml);
+	db.CFA.find(function(err, docs){
+		res.send(docs);
+	});
+    //res.send(""+BHhtml);
 });
 
 app.get('/Hunt', function(req, res) {
