@@ -34,6 +34,8 @@ app.post("/CFAdata", function(req,res){
 
 var d = new Date();
 
+console.log("HIIII");
+
 var arr = db.CFA.find({name:req.body.name});
 console.log(arr);
 
