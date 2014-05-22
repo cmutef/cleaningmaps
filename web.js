@@ -31,13 +31,13 @@ app.get("/CFAdata", function(req, res){
 });
 
 app.post("/CFAdata", function(req,res){
-
-console.log("HIIII");
-
 var d = new Date();
 
-var arr = db.CFA.find({name:req.body.name});
-console.log(arr);
+db.mycollection.findOne({
+    name:req.body.name
+}, function(err, doc) {
+    console.log(doc);
+});
 
 db.CFA.update({name:req.body.name}, {$set:{date:d}}, function() {
     // the update is complete
