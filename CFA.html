@@ -251,26 +251,20 @@
 <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 
 <script>
+var oneDay = 24*60*60*1000;
 
 $.get( "/CFAdata", function(data) {
-  console.log(data);
+
   data.forEach(function(entry){
   	var d = entry.date;
   	$("#"+entry.name).html(entry.name + "\n" + entry.andrew + "\n" + d.substring(0, d.search("T")));
-  	//console.log(Date.parse(new Date().toString()).getTime());
-  	//console.log(Date.parse(d).getTime());
-  	//console.log(Date.parse(new Date().toString())-Date.parse(d));
 
   	var firstDate = Date.parse(new Date().toString());
   	var secondDate = Date.parse(d);
 
-  	var oneDay = 24*60*60*1000;
-
     var diffDays = Math.round(Math.abs((firstDate - secondDate)/(oneDay)));
 
-    console.log(diffDays);
-
-    var color = Math.round(255 - Date.parse(new Date().toString())-Date.parse(d));
+    var color = 255 - diffDays;
     if(color < 0) color = 0;
   	$("#"+entry.name).css("background-color", "rgb("+color+","+color+","+color+")");
   });
