@@ -20,6 +20,146 @@ app.get('/CFA', function(req, res) {
 
 app.get('/BH', function(req, res) {
 	var d = new Date();
+
+db.CFA.save({
+	name:"HUNT-I1",
+	andrew:"test",
+	date:d
+});
+
+db.CFA.save({
+	name:"HUNT-B15",
+	andrew:"test",
+	date:d
+});
+db.CFA.save({
+	name:"HUNT-B14",
+	andrew:"test",
+	date:d
+});
+db.CFA.save({
+	name:"HUNT-B13",
+	andrew:"test",
+	date:d
+});
+db.CFA.save({
+	name:"HUNT-B12",
+	andrew:"test",
+	date:d
+});
+db.CFA.save({
+	name:"HUNT-B11",
+	andrew:"test",
+	date:d
+});
+
+db.CFA.save({
+	name:"HUNT-B25",
+	andrew:"test",
+	date:d
+});
+db.CFA.save({
+	name:"HUNT-B24",
+	andrew:"test",
+	date:d
+});
+db.CFA.save({
+	name:"HUNT-B23",
+	andrew:"test",
+	date:d
+});
+db.CFA.save({
+	name:"HUNT-B22",
+	andrew:"test",
+	date:d
+});
+db.CFA.save({
+	name:"HUNT-B21",
+	andrew:"test",
+	date:d
+});
+
+db.CFA.save({
+	name:"HUNT-B35",
+	andrew:"test",
+	date:d
+});
+db.CFA.save({
+	name:"HUNT-B34",
+	andrew:"test",
+	date:d
+});
+db.CFA.save({
+	name:"HUNT-B33",
+	andrew:"test",
+	date:d
+});
+db.CFA.save({
+	name:"HUNT-B32",
+	andrew:"test",
+	date:d
+});
+db.CFA.save({
+	name:"HUNT-B31",
+	andrew:"test",
+	date:d
+});
+
+
+db.CFA.save({
+	name:"HUNT-A14",
+	andrew:"test",
+	date:d
+});
+db.CFA.save({
+	name:"HUNT-A13",
+	andrew:"test",
+	date:d
+});
+db.CFA.save({
+	name:"HUNT-A12",
+	andrew:"test",
+	date:d
+});
+db.CFA.save({
+	name:"HUNT-A11",
+	andrew:"test",
+	date:d
+});
+
+db.CFA.save({
+	name:"HUNT-A24",
+	andrew:"test",
+	date:d
+});
+db.CFA.save({
+	name:"HUNT-A23",
+	andrew:"test",
+	date:d
+});
+db.CFA.save({
+	name:"HUNT-A22",
+	andrew:"test",
+	date:d
+});
+db.CFA.save({
+	name:"HUNT-A21",
+	andrew:"test",
+	date:d
+});
+
+db.CFA.save({
+	name:"HUNT-A32",
+	andrew:"test",
+	date:d
+});
+db.CFA.save({
+	name:"HUNT-A31",
+	andrew:"test",
+	date:d
+});
+
+
     res.send(""+BHhtml);
 });
 
