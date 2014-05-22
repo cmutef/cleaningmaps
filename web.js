@@ -14,49 +14,37 @@ app.get('/', function(req, res) {res.send("hello world"); });
 
 app.get('/CFA', function(req, res) {
 	var d = new Date();
-	for(var i = 1; i < 7; i++)
-	{
-		db.CFA.save({
-			name:"BH140F-A"+i,
-			andrew:"test",
-			date:d
-		});
-	}
-	for(var i = 1; i < 7; i++)
-	{
-		db.CFA.save({
-			name:"BH140F-B"+i,
-			andrew:"test",
-			date:d
-		});
-	}
-	for(var i = 1; i < 7; i++)
-	{
-		db.CFA.save({
-			name:"BH140F-C"+i,
-			andrew:"test",
-			date:d
-		});
-	}
-	for(var i = 1; i < 7; i++)
-	{
-		db.CFA.save({
-			name:"BH140F-D"+i,
-			andrew:"test",
-			date:d
-		});
-	}
-	for(var i = 1; i < 7; i++)
-	{
-		db.CFA.save({
-			name:"BH140F-E"+i,
-			andrew:"test",
-			date:d
-		});
-	}
 
 	db.CFA.save({
-			name:"BH140F-I1",
+			name:"WEB-BH01",
+			andrew:"test",
+			date:d
+		});
+
+	db.CFA.save({
+			name:"BH140A-CC1",
+			andrew:"test",
+			date:d
+		});
+
+	db.CFA.save({
+			name:"rs-cl-baker-a",
+			andrew:"test",
+			date:d
+		});
+
+	db.CFA.save({
+			name:"rs-cl-baker-b",
+			andrew:"test",
+			date:d
+		});
+	db.CFA.save({
+			name:"prn-cl-baker-1",
+			andrew:"test",
+			date:d
+		});
+	db.CFA.save({
+			name:"prn-cl-baker-2",
 			andrew:"test",
 			date:d
 		});
