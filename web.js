@@ -13,11 +13,11 @@ app.use(bodyParser());
 app.get('/', function(req, res) {res.send("hello world"); });
 
 app.get('/CFA', function(req, res) {
-	db.CFA.find(function(err, docs){
+	/*db.CFA.find(function(err, docs){
         res.send(docs);
-	});
+	});*/
 	
-    //res.send(""+CFAhtml);
+    res.send(""+CFAhtml);
 });
 
 app.get("/CFAdata", function(req, res){
@@ -32,14 +32,11 @@ app.get("/CFAdata", function(req, res){
 
 app.post("/CFAdata", function(req,res){
 
-db.mycollection.findAndModify({
-    query: { name: req.body.name },
-    update: { $set: { date:new Date() } },
-    new: true
-}, function(err, doc, lastErrorObject) {
-    
-});
+var d = new Date();
 
+db.CFA.update({name:req.body.name}, {$set:{date:d}}, function() {
+    // the update is complete
+});
 	
 });
 
