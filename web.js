@@ -16,40 +16,88 @@ app.get('/CFA', function(req, res) {
 	var d = new Date();
 
 	db.CFA.save({
-			name:"WEB-BH01",
+			name:"BH140D-C5",
 			andrew:"test",
 			date:d
 		});
 
 	db.CFA.save({
-			name:"BH140A-CC1",
+			name:"BH140D-C4",
 			andrew:"test",
 			date:d
 		});
 
 	db.CFA.save({
-			name:"rs-cl-baker-a",
+			name:"BH140D-C3",
 			andrew:"test",
 			date:d
 		});
 
 	db.CFA.save({
-			name:"rs-cl-baker-b",
+			name:"BH140D-C2",
+			andrew:"test",
+			date:d
+		});
+
+	db.CFA.save({
+			name:"BH140D-C1",
+			andrew:"test",
+			date:d
+		});
+
+	db.CFA.save({
+			name:"BH140D-B4",
 			andrew:"test",
 			date:d
 		});
 	db.CFA.save({
-			name:"prn-cl-baker-1",
+			name:"BH140D-B3",
 			andrew:"test",
 			date:d
 		});
 	db.CFA.save({
-			name:"prn-cl-baker-2",
+			name:"BH140D-B2",
+			andrew:"test",
+			date:d
+		});
+	db.CFA.save({
+			name:"BH140D-B1",
+			andrew:"test",
+			date:d
+		});
+	db.CFA.save({
+			name:"BH140D-I1W",
+			andrew:"test",
+			date:d
+		});
+	db.CFA.save({
+			name:"BH140D-I1M",
+			andrew:"test",
+			date:d
+		});
+	db.CFA.save({
+			name:"BH140D-A4",
+			andrew:"test",
+			date:d
+		});
+	db.CFA.save({
+			name:"BH140D-A3",
+			andrew:"test",
+			date:d
+		});
+	db.CFA.save({
+			name:"BH140D-A2",
+			andrew:"test",
+			date:d
+		});
+	db.CFA.save({
+			name:"BH140D-A1",
 			andrew:"test",
 			date:d
 		});
 	
 	
+
     res.send(""+CFAhtml);
 });
 
