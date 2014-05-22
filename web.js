@@ -20,13 +20,13 @@ app.get('/CFA', function(req, res) {
 
 app.get('/BH', function(req, res) {
 	var d = new Date();
-db.save({
+db.CFA.save({
 	name:"BH140C-I1",
 	andrew:"test",
 	date:d
 });
 
-db.save({
+db.CFA.save({
 	name:"BH140C-10",
 	andrew:"test",
 	date:d
