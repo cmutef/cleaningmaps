@@ -257,6 +257,9 @@ $.get( "/CFAdata", function(data) {
   data.forEach(function(entry){
   	var d = entry.date;
   	$("#"+entry.name).html(entry.name + "\n" + entry.andrew + "\n" + d.substring(0, d.search("T")));
+  	console.log(Date.parse(new Date().toString()));
+  	console.log(Date.parse(d));
+  	console.log(Date.parse(new Date().toString())-Date.parse(d));
     var color = Math.round(255 - Date.parse(new Date().toString())-Date.parse(d));
     if(color < 0) color = 0;
   	$("#"+entry.name).css("background-color", "rgb("+color+","+color+","+color+")");
