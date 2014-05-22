@@ -27,7 +27,15 @@ app.get("/CFAdata", function(req, res){
 });
 
 app.post("/CFAdata", function(req,res){
-	console.log(req.body);
+	db.CFA.findAndModify({
+		query: {name: req.body.name},
+		update: {$set: {date:new Date()}}
+	}, function(err, doc, lastErrorObject) {
+		
+	}
+	});
+
+	
 });
 
 var port = Number(process.env.PORT || 5000);
