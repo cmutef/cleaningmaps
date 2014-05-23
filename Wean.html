@@ -423,7 +423,7 @@ $.get( "/CFAdata", function(data) {
 
   data.forEach(function(entry){
   	var d = entry.date;
-  	$("#"+entry.name).html(entry.name + "\n" + entry.andrew + "\n" + d.substring(0, d.search("T")));
+  	$("#"+entry.name).html(entry.name + "</br>" + entry.andrew + "</br>" + d.substring(0, d.search("T")));
 
   	var firstDate = Date.parse(new Date().toString());
   	var secondDate = Date.parse(d);

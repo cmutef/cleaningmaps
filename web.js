@@ -42,27 +42,6 @@ app.get('/Hunt', function(req, res) {
 
 app.get('/Cyert', function(req, res) {
 	var d = new Date();
-
-    db.CFA.save({
-			name:"WW109-C6",
-			andrew:"test",
-			date:d
-    });
-    db.CFA.save({
-			name:"WW109-C1",
-			andrew:"test",
-			date:d
-    });
-    db.CFA.save({
-			name:"WW109-C11",
-			andrew:"test",
-			date:d
-    });
-    db.CFA.save({
-			name:"WW109-A4",
-			andrew:"test",
-			date:d
-    });
      
     res.send(""+Cyerthtml);
 });
