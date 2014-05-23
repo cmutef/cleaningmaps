@@ -44,44 +44,17 @@ app.get('/Cyert', function(req, res) {
 	var d = new Date();
 
     db.CFA.save({
-			name:"WW109-B3",
+			name:"WW109-C6",
 			andrew:"test",
 			date:d
     });
     db.CFA.save({
-			name:"WW109-B2",
+			name:"WW109-C1",
 			andrew:"test",
 			date:d
     });
     db.CFA.save({
-			name:"WW109-B1",
-			andrew:"test",
-			date:d
-    });
-
-    db.CFA.save({
-			name:"WW109-D4",
-			andrew:"test",
-			date:d
-    });
-    db.CFA.save({
-			name:"WW109-D3",
-			andrew:"test",
-			date:d
-    });
-    db.CFA.save({
-			name:"WW109-D2",
-			andrew:"test",
-			date:d
-    });
-    db.CFA.save({
-			name:"WW109-D1",
-			andrew:"test",
-			date:d
-    });
-
-    db.CFA.save({
-			name:"WW109-A5",
+			name:"WW109-C11",
 			andrew:"test",
 			date:d
     });
@@ -90,35 +63,6 @@ app.get('/Cyert', function(req, res) {
 			andrew:"test",
 			date:d
     });
-    db.CFA.save({
-			name:"WW109-A3",
-			andrew:"test",
-			date:d
-    });
-    db.CFA.save({
-			name:"WW109-A2",
-			andrew:"test",
-			date:d
-    });
-    db.CFA.save({
-			name:"WW109-A1",
-			andrew:"test",
-			date:d
-    });
-
-    db.CFA.save({
-			name:"WW109-SCANNER",
-			andrew:"test",
-			date:d
-    });
-
-    for(var i = 1; i <13; i++){
-    	db.CFA.save({
-			name:"WW109-C"+i,
-			andrew:"test",
-			date:d
-    });
-    }
      
     res.send(""+Cyerthtml);
 });
