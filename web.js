@@ -17,80 +17,112 @@ app.get('/', function(req, res) {res.send("hello world"); });
 
 app.get('/CFA', function(req, res) {
 	var d = new Date();
-    for(var i = 1; i < 11; i++)
-    {
-    	var n =""
-    	if(i<10)n="0";
     	db.CFA.save({
-			name:"CFA323-"+n+i,
+			name:"prn-cl-cfa-a",
 			andrew:"test",
 			date:d
 		});
-    }
-    for(var i = 1; i < 21; i++)
-    {
-    	var n =""
-    	if(i<10)n="0";
-    	db.CFA.save({
-			name:"CFA317-"+n+i,
-			andrew:"test",
-			date:d
-		});
-    }
-    db.CFA.save({
-			name:"CFA318-SCANNER",
-			andrew:"test",
-			date:d
-		});
-    db.CFA.save({
-			name:"CFA317-SCANNER",
-			andrew:"test",
-			date:d
-		});
-    db.CFA.save({
-			name:"CFA-WEB02",
-			andrew:"test",
-			date:d
-		});
-    db.CFA.save({
-			name:"CFA-WEB01",
-			andrew:"test",
-			date:d
-		});
-    db.CFA.save({
-			name:"rs-cl-cfa-a",
-			andrew:"test",
-			date:d
-		});
-     db.CFA.save({
-			name:"prn-cl-cfa-1",
-			andrew:"test",
-			date:d
-		});
-      db.CFA.save({
-			name:"CFA322-CC1",
-			andrew:"test",
-			date:d
-		});
-      db.CFA.save({
-			name:"CFA321-01",
-			andrew:"test",
-			date:d
-		});
-      db.CFA.save({
-			name:"CFA320-CC1",
-			andrew:"test",
-			date:d
-		});
-      db.CFA.save({
-			name:"CFA320-CC2",
-			andrew:"test",
-			date:d
-		});
+    
     res.send(""+CFAhtml);
 });
 
 app.get('/BH', function(req, res) {
+	var d = new Date();
+	for(var i = 1; i < 7; i++){
+		db.CFA.save({
+			name:"BH140E-A"+i,
+			andrew:"test",
+			date:d
+		});
+		db.CFA.save({
+			name:"BH140E-B"+i,
+			andrew:"test",
+			date:d
+		});
+		db.CFA.save({
+			name:"BH140E-C"+i,
+			andrew:"test",
+			date:d
+		});
+		db.CFA.save({
+			name:"BH140E-D"+i,
+			andrew:"test",
+			date:d
+		});
+		db.CFA.save({
+			name:"BH140E-E"+i,
+			andrew:"test",
+			date:d
+		});
+	}
+	db.CFA.save({
+			name:"BH140E-I1",
+			andrew:"test",
+			date:d
+		});
+	for(var i = 1; i < 7; i++){
+		db.CFA.save({
+			name:"BH140F-A"+i,
+			andrew:"test",
+			date:d
+		});
+		db.CFA.save({
+			name:"BH140F-B"+i,
+			andrew:"test",
+			date:d
+		});
+		db.CFA.save({
+			name:"BH140F-C"+i,
+			andrew:"test",
+			date:d
+		});
+		db.CFA.save({
+			name:"BH140F-D"+i,
+			andrew:"test",
+			date:d
+		});
+		db.CFA.save({
+			name:"BH140F-E"+i,
+			andrew:"test",
+			date:d
+		});
+	}
+	db.CFA.save({
+			name:"BH140F-I1",
+			andrew:"test",
+			date:d
+		});
+
+	db.CFA.save({
+			name:"WEB-BH01",
+			andrew:"test",
+			date:d
+		});
+	db.CFA.save({
+			name:"rs-cl-baker-a",
+			andrew:"test",
+			date:d
+		});
+	db.CFA.save({
+			name:"rs-cl-baker-b",
+			andrew:"test",
+			date:d
+		});
+	db.CFA.save({
+			name:"prn-cl-baker-1",
+			andrew:"test",
+			date:d
+		});
+	db.CFA.save({
+			name:"prn-cl-baker-2",
+			andrew:"test",
+			date:d
+		});
+	db.CFA.save({
+			name:"BH140A-CC1",
+			andrew:"test",
+			date:d
+		});
     res.send(""+BHhtml);
 });
 
