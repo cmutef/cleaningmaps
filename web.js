@@ -26,40 +26,19 @@ app.get('/BH', function(req, res) {
 
 app.get('/Wean', function(req, res) {
 	var d = new Date();
-	for(var i = 1; i < 7; i++){
-		var n = "";
-		db.CFA.save({
-			name:"WEH5201-A"+i,
-			andrew:"test",
-			date:d
-		});
-		db.CFA.save({
-			name:"WEH5201-B"+i,
-			andrew:"test",
-			date:d
-		});
 
-db.CFA.save({
-			name:"WEH5201-C"+i,
-			andrew:"test",
-			date:d
-		});
-
-db.CFA.save({
-			name:"WEH5201-D"+i,
-			andrew:"test",
-			date:d
-		});
-
-db.CFA.save({
-			name:"WEH5201-E"+i,
-			andrew:"test",
-			date:d
-		});
-
-	}
 	db.CFA.save({
-			name:"WEH5201-I1",
+			name:"WEH5206-CC3",
+			andrew:"test",
+			date:d
+		});
+	db.CFA.save({
+			name:"WEH5206-CC2",
+			andrew:"test",
+			date:d
+		});
+	db.CFA.save({
+			name:"WEH5206-CC1",
 			andrew:"test",
 			date:d
 		});
