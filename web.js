@@ -26,42 +26,70 @@ app.get('/BH', function(req, res) {
 
 app.get('/Wean', function(req, res) {
 	var d = new Date();
-	for(var i = 1; i < 7; i++){
+	for(var i = 1; i < 21; i++){
+		var n = "";
+		if(i<10) n="0";
 		db.CFA.save({
-			name:"WEH5201-A"+i,
-			andrew:"test",
-			date:d
-		});
-
-		db.CFA.save({
-			name:"WEH5201-B"+i,
-			andrew:"test",
-			date:d
-		});
-
-		db.CFA.save({
-			name:"WEH5201-C"+i,
-			andrew:"test",
-			date:d
-		});
-
-		db.CFA.save({
-			name:"WEH5201-D"+i,
-			andrew:"test",
-			date:d
-		});
-
-		db.CFA.save({
-			name:"WEH5201-E"+i,
+			name:"WEH5207-"+n+i,
 			andrew:"test",
 			date:d
 		});
 	}
+
 	db.CFA.save({
-			name:"WEH5201-I1",
+			name:"WEH5207-SCANNER",
 			andrew:"test",
 			date:d
 		});
+
+	db.CFA.save({
+			name:"WEH5206-CC3",
+			andrew:"test",
+			date:d
+		});
+
+	db.CFA.save({
+			name:"WEH5206-CC2",
+			andrew:"test",
+			date:d
+		});
+
+	db.CFA.save({
+			name:"WEH5206-CC1",
+			andrew:"test",
+			date:d
+		});
+
+	db.CFA.save({
+			name:"WEB-WEH01",
+			andrew:"test",
+			date:d
+		});
+
+	db.CFA.save({
+			name:"WEB-WEH02",
+			andrew:"test",
+			date:d
+		});
+	db.CFA.save({
+			name:"rs-cl-wean-a",
+			andrew:"test",
+			date:d
+		});
+	db.CFA.save({
+			name:"prn-cl-wean-2",
+			andrew:"test",
+			date:d
+		});
+	db.CFA.save({
+			name:"prn-cl-wean-1",
+			andrew:"test",
+			date:d
+		});
+
+
+
+
     res.send(""+Weanhtml);
 });
 
