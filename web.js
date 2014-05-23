@@ -9,6 +9,7 @@ var db = require("mongojs").connect(process.env.MONGOHQ_URL, collections);
 var CFAhtml = fs.readFileSync("CFA.html", 'utf8');
 var BHhtml = fs.readFileSync("BH.html", 'utf8');
 var Hunthtml = fs.readFileSync("Hunt.html", 'utf8');
+var Weanhtml = fs.readFileSync("Wean.html", 'utf8');
 
 app.use(bodyParser());
 
@@ -23,25 +24,48 @@ app.get('/BH', function(req, res) {
     res.send(""+BHhtml);
 });
 
-app.get('/Hunt', function(req, res) {
+app.get('/Wean', function(req, res) {
 	var d = new Date();
-	db.CFA.save({
-		name:"prn-cl-hunt-1",
-		andrew:"test",
-		date:d
-	});
+	for(var i = 1; i < 7; i++){
+		db.CFA.save({
+			name:"WEH5202-A"+i,
+			andrew:"test",
+			date:d
+		});
 
-	db.CFA.save({
-		name:"rs-cl-hunt-a",
-		andrew:"test",
-		date:d
-	});
+		db.CFA.save({
+			name:"WEH5202-B"+i,
+			andrew:"test",
+			date:d
+		});
 
+		db.CFA.save({
+			name:"WEH5202-C"+i,
+			andrew:"test",
+			date:d
+		});
+
+		db.CFA.save({
+			name:"WEH5202-D"+i,
+			andrew:"test",
+			date:d
+		});
+
+		db.CFA.save({
+			name:"WEH5202-E"+i,
+			andrew:"test",
+			date:d
+		});
+	}
 	db.CFA.save({
-		name:"HUNT-CC1",
-		andrew:"test",
-		date:d
-	});
+			name:"WEH5202-I1",
+			andrew:"test",
+			date:d
+		});
+    res.send(""+Weanhtml);
+});
+
+app.get('/Hunt', function(req, res) {
 
     res.send(""+Hunthtml);
 });
