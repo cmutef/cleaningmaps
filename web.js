@@ -28,37 +28,37 @@ app.get('/Wean', function(req, res) {
 	var d = new Date();
 	for(var i = 1; i < 7; i++){
 		db.CFA.save({
-			name:"WEH5202-A"+i,
+			name:"WEH5201-A"+i,
 			andrew:"test",
 			date:d
 		});
 
 		db.CFA.save({
-			name:"WEH5202-B"+i,
+			name:"WEH5201-B"+i,
 			andrew:"test",
 			date:d
 		});
 
 		db.CFA.save({
-			name:"WEH5202-C"+i,
+			name:"WEH5201-C"+i,
 			andrew:"test",
 			date:d
 		});
 
 		db.CFA.save({
-			name:"WEH5202-D"+i,
+			name:"WEH5201-D"+i,
 			andrew:"test",
 			date:d
 		});
 
 		db.CFA.save({
-			name:"WEH5202-E"+i,
+			name:"WEH5201-E"+i,
 			andrew:"test",
 			date:d
 		});
 	}
 	db.CFA.save({
-			name:"WEH5202-I1",
+			name:"WEH5201-I1",
 			andrew:"test",
 			date:d
 		});
