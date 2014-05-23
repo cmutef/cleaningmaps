@@ -43,93 +43,93 @@ app.get('/Hunt', function(req, res) {
 app.get('/Cyert', function(req, res) {
 	var d = new Date();
     db.CFA.save({
-			name:"Cyert100D-I1",
+			name:"CYH100D-I1",
 			andrew:"test",
 			date:d
         });
     db.CFA.save({
-			name:"Cyert100D-A1",
+			name:"CYH100D-A1",
 			andrew:"test",
 			date:d
         });
     db.CFA.save({
-			name:"Cyert100D-A2",
+			name:"CYH100D-A2",
 			andrew:"test",
 			date:d
         });
     db.CFA.save({
-			name:"Cyert100D-A3",
+			name:"CYH100D-A3",
 			andrew:"test",
 			date:d
         });
     db.CFA.save({
-			name:"Cyert100D-A4",
+			name:"CYH100D-A4",
 			andrew:"test",
 			date:d
         });
     db.CFA.save({
-			name:"Cyert100D-A5",
+			name:"CYH100D-A5",
 			andrew:"test",
 			date:d
         });
 
      db.CFA.save({
-			name:"Cyert100D-B1",
+			name:"CYH100D-B1",
 			andrew:"test",
 			date:d
         });
     db.CFA.save({
-			name:"Cyert100D-B2",
+			name:"CYH100D-B2",
 			andrew:"test",
 			date:d
         });
     db.CFA.save({
-			name:"Cyert100D-B3",
+			name:"CYH100D-B3",
 			andrew:"test",
 			date:d
         });
     db.CFA.save({
-			name:"Cyert100D-B4",
+			name:"CYH100D-B4",
 			andrew:"test",
 			date:d
         });
     db.CFA.save({
-			name:"Cyert100D-B5",
+			name:"CYH100D-B5",
 			andrew:"test",
 			date:d
         });
     db.CFA.save({
-			name:"Cyert100D-B6",
+			name:"CYH100D-B6",
 			andrew:"test",
 			date:d
         });
     db.CFA.save({
-			name:"Cyert100D-C1",
+			name:"CYH100D-C1",
 			andrew:"test",
 			date:d
         });
     db.CFA.save({
-			name:"Cyert100D-C2",
+			name:"CYH100D-C2",
 			andrew:"test",
 			date:d
         });
     db.CFA.save({
-			name:"Cyert100D-C3",
+			name:"CYH100D-C3",
 			andrew:"test",
 			date:d
         });
     db.CFA.save({
-			name:"Cyert100D-C4",
+			name:"CYH100D-C4",
 			andrew:"test",
 			date:d
         });
     db.CFA.save({
-			name:"Cyert100D-C5",
+			name:"CYH100D-C5",
 			andrew:"test",
 			date:d
         });
     db.CFA.save({
-			name:"Cyert100D-C6",
+			name:"CYH100D-C6",
 			andrew:"test",
 			date:d
         });
