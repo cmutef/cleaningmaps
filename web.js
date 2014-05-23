@@ -20,13 +20,20 @@ app.get('/CFA', function(req, res) {
 });
 
 app.get('/BH', function(req, res) {
-	db.CFA.find(function(err, docs){
-		res.send(docs);
-	});
-    //res.send(""+BHhtml);
+    res.send(""+BHhtml);
 });
 
 app.get('/Hunt', function(req, res) {
+	var d = new Date();
+
+	for(var i =1; i < 11; i++){
+	db.CFA.save({
+		name:"HUNTUNIX-"+i,
+		andrew:"test",
+		date:d
+	});
+	}
+
     res.send(""+Hunthtml);
 });
 
