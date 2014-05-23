@@ -6,6 +6,7 @@ var fs = require("fs");
 var app = express();
 var collections = ["CFA", "Baker", "Wean", "Cyert", "Hunt"];
 var db = require("mongojs").connect(process.env.MONGOLAB_URI, collections);
+var indexhtml = fs.readFileSync("index.html", 'utf8');
 var CFAhtml = fs.readFileSync("CFA.html", 'utf8');
 var BHhtml = fs.readFileSync("BH.html", 'utf8');
 var Hunthtml = fs.readFileSync("Hunt.html", 'utf8');
@@ -14,7 +15,9 @@ var Cyerthtml = fs.readFileSync("Cyert.html", 'utf8');
 
 app.use(bodyParser());
 
-app.get('/', function(req, res) {res.send("hello world"); });
+app.get('/', function(req, res) {
+	res.send(""+indexhtml); 
+});
 
 app.get('/CFA', function(req, res) {
 
