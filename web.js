@@ -25,14 +25,23 @@ app.get('/BH', function(req, res) {
 
 app.get('/Hunt', function(req, res) {
 	var d = new Date();
-
-	for(var i =1; i < 11; i++){
 	db.CFA.save({
-		name:"HUNTUNIX-"+i,
+		name:"prn-cl-hunt-1",
 		andrew:"test",
 		date:d
 	});
-	}
+
+	db.CFA.save({
+		name:"rs-cl-hunt-a",
+		andrew:"test",
+		date:d
+	});
+
+	db.CFA.save({
+		name:"HUNT-CC1",
+		andrew:"test",
+		date:d
+	});
 
     res.send(""+Hunthtml);
 });
