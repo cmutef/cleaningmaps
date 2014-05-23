@@ -16,7 +16,21 @@ app.use(bodyParser());
 app.get('/', function(req, res) {res.send("hello world"); });
 
 app.get('/CFA', function(req, res) {
-
+    for(var i = 1; i < 21; i++)
+    {
+    	var n =""
+    	if(i<10)n="0";
+    	db.CFA.save({
+			name:"CFA318-"+n+i,
+			andrew:"test",
+			date:d
+		});
+    }
+    db.CFA.save({
+			name:"CFA318-I1",
+			andrew:"test",
+			date:d
+		});
     res.send(""+CFAhtml);
 });
 
