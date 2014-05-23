@@ -16,116 +16,11 @@ app.use(bodyParser());
 app.get('/', function(req, res) {res.send("hello world"); });
 
 app.get('/CFA', function(req, res) {
-	var d = new Date();
-    	db.CFA.save({
-			name:"prn-cl-cfa-a",
-			andrew:"test",
-			date:d
-		});
-    
+
     res.send(""+CFAhtml);
 });
 
 app.get('/BH', function(req, res) {
-	var d = new Date();
-
-		db.CFA.save({
-			name:"BH140D-A1",
-			andrew:"test",
-			date:d
-		});
-		db.CFA.save({
-			name:"BH140D-A2",
-			andrew:"test",
-			date:d
-		});
-		db.CFA.save({
-			name:"BH140D-A3",
-			andrew:"test",
-			date:d
-		});
-		db.CFA.save({
-			name:"BH140D-A4",
-			andrew:"test",
-			date:d
-		});
-
-		db.CFA.save({
-			name:"BH140D-B1",
-			andrew:"test",
-			date:d
-		});
-		db.CFA.save({
-			name:"BH140D-B2",
-			andrew:"test",
-			date:d
-		});
-		db.CFA.save({
-			name:"BH140D-B3",
-			andrew:"test",
-			date:d
-		});
-		db.CFA.save({
-			name:"BH140D-B4",
-			andrew:"test",
-			date:d
-		});
-
-		db.CFA.save({
-			name:"BH140D-C1",
-			andrew:"test",
-			date:d
-		});
-		db.CFA.save({
-			name:"BH140D-C2",
-			andrew:"test",
-			date:d
-		});
-		db.CFA.save({
-			name:"BH140D-C3",
-			andrew:"test",
-			date:d
-		});
-		db.CFA.save({
-			name:"BH140D-C4",
-			andrew:"test",
-			date:d
-		});
-		db.CFA.save({
-			name:"BH140D-C5",
-			andrew:"test",
-			date:d
-		});
-
-		db.CFA.save({
-			name:"BH140D-I1M",
-			andrew:"test",
-			date:d
-		});
-
-		db.CFA.save({
-			name:"BH140D-I1W",
-			andrew:"test",
-			date:d
-		});
-
-		for(var i = 1; i < 21; i++){
-			var n="";
-			if(i<10)n="0";
-			db.CFA.save({
-			name:"BH140C-"+n+i,
-			andrew:"test",
-			date:d
-		});
-		}
-
-		db.CFA.save({
-			name:"BH140C-I1",
-			andrew:"test",
-			date:d
-		});
-
-
 
     res.send(""+BHhtml);
 });
@@ -135,6 +30,247 @@ app.get('/Wean', function(req, res) {
 });
 
 app.get('/Hunt', function(req, res) {
+	var d = new Date();
+
+	for(var i = 1; i < 4; i++)
+	{
+		db.CFA.save({
+			name:"HUNT-B"+1+"5",
+			andrew:"test",
+			date:d
+		});
+		db.CFA.save({
+			name:"HUNT-B"+1+"4",
+			andrew:"test",
+			date:d
+		});
+		db.CFA.save({
+			name:"HUNT-B"+1+"3",
+			andrew:"test",
+			date:d
+		});
+		db.CFA.save({
+			name:"HUNT-B"+1+"2",
+			andrew:"test",
+			date:d
+		});
+		db.CFA.save({
+			name:"HUNT-B"+1+"1",
+			andrew:"test",
+			date:d
+		});
+	}
+
+	db.CFA.save({
+			name:"HUNT-A14",
+			andrew:"test",
+			date:d
+		});
+	db.CFA.save({
+			name:"HUNT-A13",
+			andrew:"test",
+			date:d
+		});
+	db.CFA.save({
+			name:"HUNT-A12",
+			andrew:"test",
+			date:d
+		});
+	db.CFA.save({
+			name:"HUNT-A11",
+			andrew:"test",
+			date:d
+		});
+  	db.CFA.save({
+			name:"HUNT-A24",
+			andrew:"test",
+			date:d
+		});
+	db.CFA.save({
+			name:"HUNT-A23",
+			andrew:"test",
+			date:d
+		});
+	db.CFA.save({
+			name:"HUNT-A22",
+			andrew:"test",
+			date:d
+		});
+	db.CFA.save({
+			name:"HUNT-A21",
+			andrew:"test",
+			date:d
+		});
+	db.CFA.save({
+			name:"HUNT-A32",
+			andrew:"test",
+			date:d
+		});
+	db.CFA.save({
+			name:"HUNT-A31",
+			andrew:"test",
+			date:d
+		});
+    	
+    	db.CFA.save({
+			name:"HUNT-I1",
+			andrew:"test",
+			date:d
+		});
+    
+db.CFA.save({
+			name:"HUNT-D14",
+			andrew:"test",
+			date:d
+		});
+	db.CFA.save({
+			name:"HUNT-D13",
+			andrew:"test",
+			date:d
+		});
+	db.CFA.save({
+			name:"HUNT-D12",
+			andrew:"test",
+			date:d
+		});
+	db.CFA.save({
+			name:"HUNT-D11",
+			andrew:"test",
+			date:d
+		});
+
+	db.CFA.save({
+			name:"HUNT-D24",
+			andrew:"test",
+			date:d
+		});
+	db.CFA.save({
+			name:"HUNT-D23",
+			andrew:"test",
+			date:d
+		});
+	db.CFA.save({
+			name:"HUNT-D22",
+			andrew:"test",
+			date:d
+		});
+	db.CFA.save({
+			name:"HUNT-D21",
+			andrew:"test",
+			date:d
+		});
+	db.CFA.save({
+			name:"HUNT-D33",
+			andrew:"test",
+			date:d
+		});
+	db.CFA.save({
+			name:"HUNT-D32",
+			andrew:"test",
+			date:d
+		});
+	db.CFA.save({
+			name:"HUNT-D31",
+			andrew:"test",
+			date:d
+		});
+
+db.CFA.save({
+			name:"HUNT-C15",
+			andrew:"test",
+			date:d
+		});
+	db.CFA.save({
+			name:"HUNT-C14",
+			andrew:"test",
+			date:d
+		});
+	db.CFA.save({
+			name:"HUNT-C13",
+			andrew:"test",
+			date:d
+		});
+	db.CFA.save({
+			name:"HUNT-C12",
+			andrew:"test",
+			date:d
+		});
+	db.CFA.save({
+			name:"HUNT-C11",
+			andrew:"test",
+			date:d
+		});
+	db.CFA.save({
+			name:"HUNT-C25",
+			andrew:"test",
+			date:d
+		});
+	db.CFA.save({
+			name:"HUNT-C24",
+			andrew:"test",
+			date:d
+		});
+	db.CFA.save({
+			name:"HUNT-C23",
+			andrew:"test",
+			date:d
+		});
+	db.CFA.save({
+			name:"HUNT-C22",
+			andrew:"test",
+			date:d
+		});
+	db.CFA.save({
+			name:"HUNT-C21",
+			andrew:"test",
+			date:d
+		});
+		db.CFA.save({
+			name:"HUNT-C34",
+			andrew:"test",
+			date:d
+		});
+	db.CFA.save({
+			name:"HUNT-C33",
+			andrew:"test",
+			date:d
+		});
+	db.CFA.save({
+			name:"HUNT-C32",
+			andrew:"test",
+			date:d
+		});
+	db.CFA.save({
+			name:"HUNT-C31",
+			andrew:"test",
+			date:d
+		});
+
+	for(var i=1; i<11; i++)
+	{
+		db.CFA.save({
+			name:"HUNTUNIX-"+i,
+			andrew:"test",
+			date:d
+		});
+	}
+
+	db.CFA.save({
+			name:"prn-cl-hunt-1",
+			andrew:"test",
+			date:d
+		});
+
+	db.CFA.save({
+			name:"rs-cl-hunt-a",
+			andrew:"test",
+			date:d
+		});
+	db.CFA.save({
+			name:"HUNT-CC1",
+			andrew:"test",
+			date:d
+		});
 
     res.send(""+Hunthtml);
 });
