@@ -44,147 +44,82 @@ app.get('/Cyert', function(req, res) {
 	var d = new Date();
 
     db.CFA.save({
-			name:"CYH100-SCANNER",
+			name:"WW109-B3",
 			andrew:"test",
 			date:d
-        });
-     db.CFA.save({
-			name:"MORE-C7",
+    });
+    db.CFA.save({
+			name:"WW109-B2",
 			andrew:"test",
 			date:d
-        });
-     db.CFA.save({
-			name:"MORE-C6",
+    });
+    db.CFA.save({
+			name:"WW109-B1",
 			andrew:"test",
 			date:d
-        });
-     db.CFA.save({
-			name:"MORE-C5",
-			andrew:"test",
-			date:d
-        });
-     db.CFA.save({
-			name:"MORE-C4",
-			andrew:"test",
-			date:d
-        });
-     db.CFA.save({
-			name:"MORE-C3",
-			andrew:"test",
-			date:d
-        });
-     db.CFA.save({
-			name:"MORE-C2",
-			andrew:"test",
-			date:d
-        });
-     db.CFA.save({
-			name:"MORE-C1",
-			andrew:"test",
-			date:d
-        });
+    });
 
-db.CFA.save({
-			name:"MORE-B5",
+    db.CFA.save({
+			name:"WW109-D4",
 			andrew:"test",
 			date:d
-        });
-     db.CFA.save({
-			name:"MORE-B4",
+    });
+    db.CFA.save({
+			name:"WW109-D3",
 			andrew:"test",
 			date:d
-        });
-     db.CFA.save({
-			name:"MORE-B3",
+    });
+    db.CFA.save({
+			name:"WW109-D2",
 			andrew:"test",
 			date:d
-        });
-     db.CFA.save({
-			name:"MORE-B2",
+    });
+    db.CFA.save({
+			name:"WW109-D1",
 			andrew:"test",
 			date:d
-        });
-     db.CFA.save({
-			name:"MORE-B1",
-			andrew:"test",
-			date:d
-        });
-     db.CFA.save({
-			name:"MORE-A4",
-			andrew:"test",
-			date:d
-        });
-     db.CFA.save({
-			name:"MORE-A3",
-			andrew:"test",
-			date:d
-        });
-     db.CFA.save({
-			name:"MORE-A2",
-			andrew:"test",
-			date:d
-        });
-     db.CFA.save({
-			name:"MORE-A1",
-			andrew:"test",
-			date:d
-        });
+    });
 
-     db.CFA.save({
-			name:"MORE-SCANNER",
+    db.CFA.save({
+			name:"WW109-A5",
 			andrew:"test",
 			date:d
-        });
+    });
+    db.CFA.save({
+			name:"WW109-A4",
+			andrew:"test",
+			date:d
+    });
+    db.CFA.save({
+			name:"WW109-A3",
+			andrew:"test",
+			date:d
+    });
+    db.CFA.save({
+			name:"WW109-A2",
+			andrew:"test",
+			date:d
+    });
+    db.CFA.save({
+			name:"WW109-A1",
+			andrew:"test",
+			date:d
+    });
 
-     db.CFA.save({
-			name:"prn-cl-more-1",
+    db.CFA.save({
+			name:"WW109-SCANNER",
 			andrew:"test",
 			date:d
-        });
-     db.CFA.save({
-			name:"rs-cl-more-a",
-			andrew:"test",
-			date:d
-        });
+    });
 
-     db.CFA.save({
-			name:"UC-WEB05",
+    for(var i = 1; i <13; i++){
+    	db.CFA.save({
+			name:"WW109-C"+i,
 			andrew:"test",
 			date:d
-        });
-     db.CFA.save({
-			name:"UC-WEB04",
-			andrew:"test",
-			date:d
-        });
-     db.CFA.save({
-			name:"UC-WEB03",
-			andrew:"test",
-			date:d
-        });
-     db.CFA.save({
-			name:"UC-WEB02",
-			andrew:"test",
-			date:d
-        });
-     db.CFA.save({
-			name:"UC-WEB01",
-			andrew:"test",
-			date:d
-        });
-     db.CFA.save({
-			name:"rs-cl-uc-a",
-			andrew:"test",
-			date:d
-        });
-     db.CFA.save({
-			name:"prn-cl-uc-1",
-			andrew:"test",
-			date:d
-        });
-
-
-    
+    });
+    }
+     
     res.send(""+Cyerthtml);
 });
 
