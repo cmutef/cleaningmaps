@@ -10,6 +10,7 @@ var CFAhtml = fs.readFileSync("CFA.html", 'utf8');
 var BHhtml = fs.readFileSync("BH.html", 'utf8');
 var Hunthtml = fs.readFileSync("Hunt.html", 'utf8');
 var Weanhtml = fs.readFileSync("Wean.html", 'utf8');
+var Cyerthtml = fs.readFileSync("Cyert.html", 'utf8');
 
 app.use(bodyParser());
 
@@ -37,6 +38,102 @@ app.get('/Wean', function(req, res) {
 app.get('/Hunt', function(req, res) {
 
     res.send(""+Hunthtml);
+});
+
+app.get('/Cyert', function(req, res) {
+	var d = new Date();
+    db.CFA.save({
+			name:"Cyert100D-I1",
+			andrew:"test",
+			date:d
+        });
+    db.CFA.save({
+			name:"Cyert100D-A1",
+			andrew:"test",
+			date:d
+        });
+    db.CFA.save({
+			name:"Cyert100D-A2",
+			andrew:"test",
+			date:d
+        });
+    db.CFA.save({
+			name:"Cyert100D-A3",
+			andrew:"test",
+			date:d
+        });
+    db.CFA.save({
+			name:"Cyert100D-A4",
+			andrew:"test",
+			date:d
+        });
+    db.CFA.save({
+			name:"Cyert100D-A5",
+			andrew:"test",
+			date:d
+        });
+
+     db.CFA.save({
+			name:"Cyert100D-B1",
+			andrew:"test",
+			date:d
+        });
+    db.CFA.save({
+			name:"Cyert100D-B2",
+			andrew:"test",
+			date:d
+        });
+    db.CFA.save({
+			name:"Cyert100D-B3",
+			andrew:"test",
+			date:d
+        });
+    db.CFA.save({
+			name:"Cyert100D-B4",
+			andrew:"test",
+			date:d
+        });
+    db.CFA.save({
+			name:"Cyert100D-B5",
+			andrew:"test",
+			date:d
+        });
+    db.CFA.save({
+			name:"Cyert100D-B6",
+			andrew:"test",
+			date:d
+        });
+    db.CFA.save({
+			name:"Cyert100D-C1",
+			andrew:"test",
+			date:d
+        });
+    db.CFA.save({
+			name:"Cyert100D-C2",
+			andrew:"test",
+			date:d
+        });
+    db.CFA.save({
+			name:"Cyert100D-C3",
+			andrew:"test",
+			date:d
+        });
+    db.CFA.save({
+			name:"Cyert100D-C4",
+			andrew:"test",
+			date:d
+        });
+    db.CFA.save({
+			name:"Cyert100D-C5",
+			andrew:"test",
+			date:d
+        });
+    db.CFA.save({
+			name:"Cyert100D-C6",
+			andrew:"test",
+			date:d
+        });
+    res.send(""+Cyerthtml);
 });
 
 app.get("/CFAdata", function(req, res){
