@@ -28,101 +28,105 @@ app.get('/CFA', function(req, res) {
 
 app.get('/BH', function(req, res) {
 	var d = new Date();
-	for(var i = 1; i < 7; i++){
+
 		db.CFA.save({
-			name:"BH140E-A"+i,
-			andrew:"test",
-			date:d
-		});
-		db.CFA.save({
-			name:"BH140E-B"+i,
+			name:"BH140D-A1",
 			andrew:"test",
 			date:d
 		});
 		db.CFA.save({
-			name:"BH140E-C"+i,
+			name:"BH140D-A2",
 			andrew:"test",
 			date:d
 		});
 		db.CFA.save({
-			name:"BH140E-D"+i,
+			name:"BH140D-A3",
 			andrew:"test",
 			date:d
 		});
 		db.CFA.save({
-			name:"BH140E-E"+i,
-			andrew:"test",
-			date:d
-		});
-	}
-	db.CFA.save({
-			name:"BH140E-I1",
-			andrew:"test",
-			date:d
-		});
-	for(var i = 1; i < 7; i++){
-		db.CFA.save({
-			name:"BH140F-A"+i,
-			andrew:"test",
-			date:d
-		});
-		db.CFA.save({
-			name:"BH140F-B"+i,
-			andrew:"test",
-			date:d
-		});
-		db.CFA.save({
-			name:"BH140F-C"+i,
-			andrew:"test",
-			date:d
-		});
-		db.CFA.save({
-			name:"BH140F-D"+i,
-			andrew:"test",
-			date:d
-		});
-		db.CFA.save({
-			name:"BH140F-E"+i,
-			andrew:"test",
-			date:d
-		});
-	}
-	db.CFA.save({
-			name:"BH140F-I1",
+			name:"BH140D-A4",
 			andrew:"test",
 			date:d
 		});
 
-	db.CFA.save({
-			name:"WEB-BH01",
+		db.CFA.save({
+			name:"BH140D-B1",
 			andrew:"test",
 			date:d
 		});
-	db.CFA.save({
-			name:"rs-cl-baker-a",
+		db.CFA.save({
+			name:"BH140D-B2",
 			andrew:"test",
 			date:d
 		});
-	db.CFA.save({
-			name:"rs-cl-baker-b",
+		db.CFA.save({
+			name:"BH140D-B3",
 			andrew:"test",
 			date:d
 		});
-	db.CFA.save({
-			name:"prn-cl-baker-1",
+		db.CFA.save({
+			name:"BH140D-B4",
 			andrew:"test",
 			date:d
 		});
-	db.CFA.save({
-			name:"prn-cl-baker-2",
+
+		db.CFA.save({
+			name:"BH140D-C1",
 			andrew:"test",
 			date:d
 		});
-	db.CFA.save({
-			name:"BH140A-CC1",
+		db.CFA.save({
+			name:"BH140D-C2",
 			andrew:"test",
 			date:d
 		});
+		db.CFA.save({
+			name:"BH140D-C3",
+			andrew:"test",
+			date:d
+		});
+		db.CFA.save({
+			name:"BH140D-C4",
+			andrew:"test",
+			date:d
+		});
+		db.CFA.save({
+			name:"BH140D-C5",
+			andrew:"test",
+			date:d
+		});
+
+		db.CFA.save({
+			name:"BH140D-I1M",
+			andrew:"test",
+			date:d
+		});
+
+		db.CFA.save({
+			name:"BH140D-I1W",
+			andrew:"test",
+			date:d
+		});
+
+		for(var i = 1; i < 21; i++){
+			var n="";
+			if(i<10)n="0";
+			db.CFA.save({
+			name:"BH140C-"+n+i,
+			andrew:"test",
+			date:d
+		});
+		}
+
+		db.CFA.save({
+			name:"BH140C-I1",
+			andrew:"test",
+			date:d
+		});
+
+
+
     res.send(""+BHhtml);
 });
 
