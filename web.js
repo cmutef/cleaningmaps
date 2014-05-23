@@ -16,7 +16,12 @@ app.use(bodyParser());
 app.get('/', function(req, res) {res.send("hello world"); });
 
 app.get('/CFA', function(req, res) {
-
+	var d = new Date();
+db.CFA.save({
+			name:"prn-cl-cfa-c",
+			andrew:"test",
+			date:d
+        });
     res.send(""+CFAhtml);
 });
 
@@ -34,56 +39,10 @@ app.get('/Hunt', function(req, res) {
 
 
 		db.CFA.save({
-			name:"HUNT-B25",
+			name:"HUNT-I2",
 			andrew:"test",
 			date:d
-		});
-		db.CFA.save({
-			name:"HUNT-B24",
-			andrew:"test",
-			date:d
-		});
-		db.CFA.save({
-			name:"HUNT-B23",
-			andrew:"test",
-			date:d
-		});
-		db.CFA.save({
-			name:"HUNT-B22",
-			andrew:"test",
-			date:d
-		});
-		db.CFA.save({
-			name:"HUNT-B21",
-			andrew:"test",
-			date:d
-		});
-		db.CFA.save({
-			name:"HUNT-B35",
-			andrew:"test",
-			date:d
-		});
-		db.CFA.save({
-			name:"HUNT-B34",
-			andrew:"test",
-			date:d
-		});
-		db.CFA.save({
-			name:"HUNT-B33",
-			andrew:"test",
-			date:d
-		});
-		db.CFA.save({
-			name:"HUNT-B32",
-			andrew:"test",
-			date:d
-		});
-		db.CFA.save({
-			name:"HUNT-B31",
-			andrew:"test",
-			date:d
-		});
-
+        });
 
     res.send(""+Hunthtml);
 });
