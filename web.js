@@ -44,193 +44,145 @@ app.get('/Cyert', function(req, res) {
 	var d = new Date();
 
     db.CFA.save({
-			name:"CYH100-D1",
+			name:"CYH100-SCANNER",
 			andrew:"test",
 			date:d
         });
-    db.CFA.save({
-			name:"CYH100-D2",
+     db.CFA.save({
+			name:"MORE-C7",
 			andrew:"test",
 			date:d
         });
-    db.CFA.save({
-			name:"CYH100-D3",
+     db.CFA.save({
+			name:"MORE-C6",
 			andrew:"test",
 			date:d
         });
-    db.CFA.save({
-			name:"CYH100-D4",
+     db.CFA.save({
+			name:"MORE-C5",
 			andrew:"test",
 			date:d
         });
-    db.CFA.save({
-			name:"CYH100-D5",
+     db.CFA.save({
+			name:"MORE-C4",
 			andrew:"test",
 			date:d
         });
-    db.CFA.save({
-			name:"CYH100-D6",
+     db.CFA.save({
+			name:"MORE-C3",
 			andrew:"test",
 			date:d
         });
-    db.CFA.save({
-			name:"CYH100-D7",
+     db.CFA.save({
+			name:"MORE-C2",
 			andrew:"test",
 			date:d
         });
-    db.CFA.save({
-			name:"CYH100-D8",
-			andrew:"test",
-			date:d
-        });
-
-    db.CFA.save({
-			name:"CYH100-C1",
-			andrew:"test",
-			date:d
-        });
-    db.CFA.save({
-			name:"CYH100-C2",
-			andrew:"test",
-			date:d
-        });
-    db.CFA.save({
-			name:"CYH100-C3",
-			andrew:"test",
-			date:d
-        });
-    db.CFA.save({
-			name:"CYH100-C4",
-			andrew:"test",
-			date:d
-        });
-    db.CFA.save({
-			name:"CYH100-C5",
-			andrew:"test",
-			date:d
-        });
-    db.CFA.save({
-			name:"CYH100-C6",
+     db.CFA.save({
+			name:"MORE-C1",
 			andrew:"test",
 			date:d
         });
 
-    db.CFA.save({
-			name:"CYH100-B1",
+db.CFA.save({
+			name:"MORE-B5",
 			andrew:"test",
 			date:d
         });
-    db.CFA.save({
-			name:"CYH100-B2",
+     db.CFA.save({
+			name:"MORE-B4",
 			andrew:"test",
 			date:d
         });
-    db.CFA.save({
-			name:"CYH100-B3",
+     db.CFA.save({
+			name:"MORE-B3",
 			andrew:"test",
 			date:d
         });
-    db.CFA.save({
-			name:"CYH100-B4",
+     db.CFA.save({
+			name:"MORE-B2",
 			andrew:"test",
 			date:d
         });
-    db.CFA.save({
-			name:"CYH100-B5",
+     db.CFA.save({
+			name:"MORE-B1",
 			andrew:"test",
 			date:d
         });
-    db.CFA.save({
-			name:"CYH100-B6",
+     db.CFA.save({
+			name:"MORE-A4",
 			andrew:"test",
 			date:d
         });
-    db.CFA.save({
-			name:"CYH100-B7",
+     db.CFA.save({
+			name:"MORE-A3",
 			andrew:"test",
 			date:d
         });
-    db.CFA.save({
-			name:"CYH100-B8",
+     db.CFA.save({
+			name:"MORE-A2",
 			andrew:"test",
 			date:d
         });
-
-    db.CFA.save({
-			name:"CYH100-A1",
-			andrew:"test",
-			date:d
-        });
-    db.CFA.save({
-			name:"CYH100-A2",
-			andrew:"test",
-			date:d
-        });
-    db.CFA.save({
-			name:"CYH100-A3",
-			andrew:"test",
-			date:d
-        });
-    db.CFA.save({
-			name:"CYH100-A4",
-			andrew:"test",
-			date:d
-        });
-    db.CFA.save({
-			name:"CYH100-A5",
-			andrew:"test",
-			date:d
-        });
-    db.CFA.save({
-			name:"CYH100-A6",
-			andrew:"test",
-			date:d
-        });
-    db.CFA.save({
-			name:"CYH100-A7",
-			andrew:"test",
-			date:d
-        });
-    db.CFA.save({
-			name:"CYH100-A8",
+     db.CFA.save({
+			name:"MORE-A1",
 			andrew:"test",
 			date:d
         });
 
-    db.CFA.save({
-			name:"CYH100-T1",
+     db.CFA.save({
+			name:"MORE-SCANNER",
 			andrew:"test",
 			date:d
         });
 
-    db.CFA.save({
-			name:"WEB-CYH01",
+     db.CFA.save({
+			name:"prn-cl-more-1",
+			andrew:"test",
+			date:d
+        });
+     db.CFA.save({
+			name:"rs-cl-more-a",
 			andrew:"test",
 			date:d
         });
 
-    db.CFA.save({
-			name:"WEB-CYH02",
+     db.CFA.save({
+			name:"UC-WEB05",
+			andrew:"test",
+			date:d
+        });
+     db.CFA.save({
+			name:"UC-WEB04",
+			andrew:"test",
+			date:d
+        });
+     db.CFA.save({
+			name:"UC-WEB03",
+			andrew:"test",
+			date:d
+        });
+     db.CFA.save({
+			name:"UC-WEB02",
+			andrew:"test",
+			date:d
+        });
+     db.CFA.save({
+			name:"UC-WEB01",
+			andrew:"test",
+			date:d
+        });
+     db.CFA.save({
+			name:"rs-cl-uc-a",
+			andrew:"test",
+			date:d
+        });
+     db.CFA.save({
+			name:"prn-cl-uc-1",
 			andrew:"test",
 			date:d
         });
 
-    db.CFA.save({
-			name:"rs-cl-cyert-b",
-			andrew:"test",
-			date:d
-        });
-
-    db.CFA.save({
-			name:"prn-cl-cyert-2",
-			andrew:"test",
-			date:d
-        });
-    db.CFA.save({
-			name:"CYH100-CC2",
-			andrew:"test",
-			date:d
-        });
 
     
     res.send(""+Cyerthtml);
