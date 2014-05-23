@@ -16,6 +16,7 @@ app.use(bodyParser());
 app.get('/', function(req, res) {res.send("hello world"); });
 
 app.get('/CFA', function(req, res) {
+	var d = new Date();
     for(var i = 1; i < 21; i++)
     {
     	var n =""
@@ -39,25 +40,6 @@ app.get('/BH', function(req, res) {
 });
 
 app.get('/Wean', function(req, res) {
-	var d = new Date();
-
-	db.CFA.save({
-			name:"WEH5206-CC3",
-			andrew:"test",
-			date:d
-		});
-	db.CFA.save({
-			name:"WEH5206-CC2",
-			andrew:"test",
-			date:d
-		});
-	db.CFA.save({
-			name:"WEH5206-CC1",
-			andrew:"test",
-			date:d
-		});
-
-
     res.send(""+Weanhtml);
 });
 
