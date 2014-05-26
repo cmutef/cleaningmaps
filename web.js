@@ -20,10 +20,11 @@ app.get('/', function(req, res) {
 });
 
 app.get('/CFA', function(req, res) {
-	var user = db.CFA.find({name:"ANDREW"}).andrew;
 	var entry = db.CFA.find({name:"ANDREW"});
 	console.log("entry: "+entry);
-	console.log("USER: "+user);
+	console.log("USER: "+entry.andrew);
+	console.log("name: "+entry.name);
+	console.log("date: "+entry.date);
     res.send(""+CFAhtml);
 });
 
