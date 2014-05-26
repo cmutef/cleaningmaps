@@ -50,6 +50,7 @@
     <script>
         $( "a" ).each(function( index ) {
             var link = "/"+$( this ).attr("id");
+            console.log(link);
             $( this ).click(function(){
                 console.log("clicked");
                 var v = $("#andrew").val();
