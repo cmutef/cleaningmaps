@@ -16,11 +16,8 @@ var Cyerthtml = fs.readFileSync("Cyert.html", 'utf8');
 app.use(bodyParser());
 
 app.get('/', function(req, res) {
-	var d = new Date();
-	db.CFA.save({
-		name:"BH140C-19",
-		andrew:"test",
-		date:d
+	db.CFA.find(function(err, docs){
+		res.send(docs);
 	});
     res.send(""+indexhtml); 
 });
