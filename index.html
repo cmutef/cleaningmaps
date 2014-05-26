@@ -55,7 +55,8 @@
 
                 $.post("/andrew", "andrew="+v)
                  .done(function(){
-                     window.location.href = link;
+                    alert("done "+link);
+                    window.location.href = link;
                 });
             });
         });
