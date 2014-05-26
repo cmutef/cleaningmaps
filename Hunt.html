@@ -314,7 +314,7 @@ $.get( "/CFAdata", function(data) {
 
     var diffDays = Math.round(Math.abs((firstDate - secondDate)/(oneDay)));
 
-    var color = 255 - diffDays;
+    var color = 255 - 3*diffDays;
     if(color < 0) color = 0;
   	$("#"+entry.name).css("background-color", "rgb("+color+","+color+","+color+")");
   });
