@@ -53,17 +53,15 @@ app.get("/CFAdata", function(req, res){
 });
 
 app.post("/CFAdata", function(req,res){
-
 var d = new Date();
-var user="test";
 
 db.CFA.find({name:"ANDREW"}, function(err, docs){
-	user = docs[0].andrew;
+	db.CFA.update({name:req.body.name}, {$set:{date:d, andrew:docs[0].andrew}}, function() {
+        res.send("update complete");
+    });
 });
 
-db.CFA.update({name:req.body.name}, {$set:{date:d, andrew:user}}, function() {
-    res.send("update complete");
-});
+
 	
 });
 
