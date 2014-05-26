@@ -16,6 +16,7 @@ var Cyerthtml = fs.readFileSync("Cyert.html", 'utf8');
 app.use(bodyParser());
 
 app.get('/', function(req, res) {
+	db.CFA.remove({name:"BH140C-19"});
 	db.CFA.find(function(err, docs){
 		res.send(docs);
 	});
