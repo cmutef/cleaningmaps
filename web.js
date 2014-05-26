@@ -13,22 +13,15 @@ var Hunthtml = fs.readFileSync("Hunt.html", 'utf8');
 var Weanhtml = fs.readFileSync("Wean.html", 'utf8');
 var Cyerthtml = fs.readFileSync("Cyert.html", 'utf8');
 
-var user = "test";
-
 app.use(bodyParser());
 
 app.get('/', function(req, res) {
-	var d = new Date();
-	db.CFA.save({
-			name:"ANDREW",
-			andrew:"test",
-			date:d
-        });
 	res.send(""+indexhtml); 
 });
 
 app.get('/CFA', function(req, res) {
-console.log("USER:"+user);
+	var user = db.CFA.find({name:"ANDREW"}).andrew;
+	console.log("USER: "+user);
     res.send(""+CFAhtml);
 });
 
@@ -72,7 +65,11 @@ db.CFA.update({name:req.body.name}, {$set:{date:d}}, function() {
 });
 
 app.post("/andrew", function(req,res){
-
+var d = new Date();
+db.CFA.update({name:"ANDREW"}, {$set:{date:d, andrew:req.body.andrew}}, function() {
+    res.send("update complete");
+});
+	
 user = req.body.andrew;
 	
 });
