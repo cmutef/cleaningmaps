@@ -20,7 +20,7 @@ app.get('/', function(req, res) {
 });
 
 app.get('/CFA', function(req, res) {
-	var entry = db.CFA.find({name:"ANDREW"}, function(err, docs){
+	var entry = db.CFA.find({name:"CFA318-14"}, function(err, docs){
 		console.log(docs.andrew);
 		console.log(docs.name);
 		console.log(docs.date);
