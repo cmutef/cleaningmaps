@@ -21,6 +21,7 @@ app.get('/', function(req, res) {
 
 app.get('/CFA', function(req, res) {
 	var entry = db.CFA.find({name:"CFA318-14"}, function(err, docs){
+		res.send(docs);
 		console.log(docs.andrew);
 		console.log(docs.name);
 		console.log(docs.date);
@@ -29,7 +30,7 @@ app.get('/CFA', function(req, res) {
 	console.log("USER: "+entry.andrew);
 	console.log("name: "+entry.name);
 	console.log("date: "+entry.date);*/
-    res.send(""+CFAhtml);
+    //res.send(""+CFAhtml);
 });
 
 app.get('/BH', function(req, res) {
