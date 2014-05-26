@@ -20,11 +20,15 @@ app.get('/', function(req, res) {
 });
 
 app.get('/CFA', function(req, res) {
-	var entry = db.CFA.find({name:"ANDREW"});
-	console.log("entry: "+entry);
+	var entry = db.CFA.find({name:"ANDREW"}, function(err, docs){
+		console.log(docs.andrew);
+		console.log(docs.name);
+		console.log(docs.date);
+	});
+	/*console.log("entry: "+entry);
 	console.log("USER: "+entry.andrew);
 	console.log("name: "+entry.name);
-	console.log("date: "+entry.date);
+	console.log("date: "+entry.date);*/
     res.send(""+CFAhtml);
 });
 
