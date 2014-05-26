@@ -51,14 +51,12 @@
         $( "a" ).each(function( index ) {
             $( this ).click(function(){
                 var v = $("#andrew").val();
+
                 $.post("/andrew", "andrew="+v)
                  .done(function(){
-                     
+                     console.log("andrew: "+v);
                 });
             });
-        });
-        $("#andrew").change(function(){
-                console.log("hi");
         });
     </script>
 </body>

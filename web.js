@@ -21,6 +21,8 @@ app.get('/', function(req, res) {
 
 app.get('/CFA', function(req, res) {
 	var user = db.CFA.find({name:"ANDREW"}).andrew;
+	var entry = db.CFA.find({name:"ANDREW"});
+	console.log("entry: "+)
 	console.log("USER: "+user);
     res.send(""+CFAhtml);
 });
@@ -66,6 +68,7 @@ db.CFA.update({name:req.body.name}, {$set:{date:d}}, function() {
 
 app.post("/andrew", function(req,res){
 var d = new Date();
+console.log("POST: "+req.body.andrew);
 db.CFA.update({name:"ANDREW"}, {$set:{date:d, andrew:req.body.andrew}}, function() {
     res.send("update complete");
 });
