@@ -17,6 +17,9 @@ app.use(bodyParser());
 
 app.get('/', function(req, res) {
 	var d = new Date();
+	db.CFA.remove({
+    _id:mongojs.ObjectId('538357e64a4c13020041c573')
+    });
 	db.CFA.find(function(err, docs){
 		res.send(docs);
 	});
