@@ -20,17 +20,7 @@ app.get('/', function(req, res) {
 });
 
 app.get('/CFA', function(req, res) {
-	var entry = db.CFA.find({name:"CFA318-14"}, function(err, docs){
-		res.send(docs);
-		console.log(docs[0].andrew);
-		console.log(docs[0].name);
-		console.log(docs[0].date);
-	});
-	/*console.log("entry: "+entry);
-	console.log("USER: "+entry.andrew);
-	console.log("name: "+entry.name);
-	console.log("date: "+entry.date);*/
-    //res.send(""+CFAhtml);
+    res.send(""+CFAhtml);
 });
 
 app.get('/BH', function(req, res) {
@@ -65,8 +55,13 @@ app.get("/CFAdata", function(req, res){
 app.post("/CFAdata", function(req,res){
 
 var d = new Date();
+var user="test";
 
-db.CFA.update({name:req.body.name}, {$set:{date:d}}, function() {
+var entry = db.CFA.find({name:"CFA318-14"}, function(err, docs){
+		user = docs[0].andrew;
+	});
+
+db.CFA.update({name:req.body.name}, {$set:{date:d, andrew:user}}, function() {
     res.send("update complete");
 });
 	
@@ -78,9 +73,6 @@ console.log("POST: "+req.body.andrew);
 db.CFA.update({name:"ANDREW"}, {$set:{date:d, andrew:req.body.andrew}}, function() {
     res.send("update complete");
 });
-	
-user = req.body.andrew;
-	
 });
 
 var port = Number(process.env.PORT || 5000);
