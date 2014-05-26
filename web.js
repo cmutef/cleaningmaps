@@ -22,7 +22,7 @@ app.get('/', function(req, res) {
 app.get('/CFA', function(req, res) {
 	var user = db.CFA.find({name:"ANDREW"}).andrew;
 	var entry = db.CFA.find({name:"ANDREW"});
-	console.log("entry: "+)
+	console.log("entry: "+entry);
 	console.log("USER: "+user);
     res.send(""+CFAhtml);
 });
