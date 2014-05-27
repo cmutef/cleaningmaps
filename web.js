@@ -18,7 +18,21 @@ app.use(bodyParser());
 app.get('/', function(req, res) {
 	var d = new Date();
 
-        db.CFA.remove({name:"WEH5207-SCANNER"});
+		db.CFA.save({
+			name:"WEH5206-CC2",
+			andrew:"test",
+			date:d
+		});
+		db.CFA.save({
+			name:"WEH5206-CC3",
+			andrew:"test",
+			date:d
+		});
+		db.CFA.save({
+			name:"rs-cl-wean-a",
+			andrew:"test",
+			date:d
+		});
 		db.CFA.save({
 			name:"WEH5207-SCANNER",
 			andrew:"test",
