@@ -17,61 +17,57 @@ app.use(bodyParser());
 
 app.get('/', function(req, res) {
 	var d = new Date();
-	for(var i = 1; i < 21; i++){
-		var n = "";
-		if(i < 10) n ="0";
-		db.CFA.remove({name:"WEH5207-"+n+i});
+
 		db.CFA.save({
-			name:"WEH5207-"+n+i,
+			name:"WEH5207-05",
 			andrew:"test",
 			date:d
 		});
-	}
-	db.CFA.remove({name:"WEH5206-CC3"});
 		db.CFA.save({
-			name:"WEH5206-CC3",
+			name:"WEH5207-06",
 			andrew:"test",
 			date:d
 		});
-		db.CFA.remove({name:"WEH5206-CC2"});
 		db.CFA.save({
-			name:"WEH5206-CC2",
+			name:"WEH5207-07",
 			andrew:"test",
 			date:d
 		});
-		db.CFA.remove({name:"WEH5206-CC1"});
 		db.CFA.save({
-			name:"WEH5206-CC1",
+			name:"WEH5207-10",
 			andrew:"test",
 			date:d
 		});
-		db.CFA.remove({name:"WEB-WEH01"});
+		db.CFA.save({
+			name:"WEH5207-14",
+			andrew:"test",
+			date:d
+		});
+		db.CFA.save({
+			name:"WEH5207-15",
+			andrew:"test",
+			date:d
+		});
+		db.CFA.save({
+			name:"WEH5207-19",
+			andrew:"test",
+			date:d
+		});
+		db.CFA.save({
+			name:"WEH5207-20",
+			andrew:"test",
+			date:d
+		});
+
+		
 		db.CFA.save({
 			name:"WEB-WEH01",
 			andrew:"test",
 			date:d
 		});
-		db.CFA.remove({name:"WEB-WEH02"});
+		
 		db.CFA.save({
 			name:"WEB-WEH02",
-			andrew:"test",
-			date:d
-		});
-		db.CFA.remove({name:"rs-cl-wean-a"});
-		db.CFA.save({
-			name:"rs-cl-wean-a",
-			andrew:"test",
-			date:d
-		});
-		db.CFA.remove({name:"prn-cl-wean-2"});
-		db.CFA.save({
-			name:"prn-cl-wean-2",
-			andrew:"test",
-			date:d
-		});
-		db.CFA.remove({name:"prn-cl-wean-1"});
-		db.CFA.save({
-			name:"prn-cl-wean-1",
 			andrew:"test",
 			date:d
 		});
