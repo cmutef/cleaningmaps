@@ -88,10 +88,7 @@ app.get('/BH', function(req, res) {
 });
 
 app.get('/Wean', function(req, res) {
-	db.CFA.find(function(err, docs){
-		res.send(docs);
-	})
-    //res.send(""+Weanhtml);
+    res.send(""+Weanhtml);
 });
 
 app.get('/Hunt', function(req, res) {
