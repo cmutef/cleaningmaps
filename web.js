@@ -16,7 +16,10 @@ var Cyerthtml = fs.readFileSync("Cyert.html", 'utf8');
 app.use(bodyParser());
 
 app.get('/', function(req, res) {
-	res.send(""+indexhtml); 
+	db.CFA.find(function(err, docs){
+		res.send(docs);
+	})
+	//res.send(""+indexhtml); 
 });
 
 app.get('/CFA', function(req, res) {
