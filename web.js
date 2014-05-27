@@ -16,6 +16,37 @@ var Cyerthtml = fs.readFileSync("Cyert.html", 'utf8');
 app.use(bodyParser());
 
 app.get('/', function(req, res) {
+	var d = new Date();
+	db.CFA.remove({name:"HUNT-B11"});
+	db.CFA.remove({name:"HUNT-B12"});
+	db.CFA.remove({name:"HUNT-B13"});
+	db.CFA.remove({name:"HUNT-B14"});
+	db.CFA.remove({name:"HUNT-B15"});
+	db.CFA.save({
+		name:"HUNT-B11",
+		andrew:"test",
+		date:d
+	});
+	db.CFA.save({
+		name:"HUNT-B12",
+		andrew:"test",
+		date:d
+	});
+	db.CFA.save({
+		name:"HUNT-B13",
+		andrew:"test",
+		date:d
+	});
+	db.CFA.save({
+		name:"HUNT-B14",
+		andrew:"test",
+		date:d
+	});
+	db.CFA.save({
+		name:"HUNT-B15",
+		andrew:"test",
+		date:d
+	});
 	db.CFA.find(function(err, docs){
 		res.send(docs);
 	})
