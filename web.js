@@ -18,46 +18,13 @@ app.use(bodyParser());
 app.get('/', function(req, res) {
 	var d = new Date();
 
-
+        db.CFA.remove({name:"WEH5207-SCANNER"});
 		db.CFA.save({
-			name:"WEH5207-06",
-			andrew:"test",
-			date:d
-		});
-		db.CFA.save({
-			name:"WEH5207-10",
-			andrew:"test",
-			date:d
-		});
-		db.CFA.save({
-			name:"WEH5207-11",
-			andrew:"test",
-			date:d
-		});
-		db.CFA.save({
-			name:"WEH5207-16",
-			andrew:"test",
-			date:d
-		});
-		db.CFA.save({
-			name:"WEH5207-20",
+			name:"WEH5207-SCANNER",
 			andrew:"test",
 			date:d
 		});
 
-		
-		db.CFA.save({
-			name:"WEB-WEH01",
-			andrew:"test",
-			date:d
-		});
-		
-		db.CFA.save({
-			name:"WEB-WEH02",
-			andrew:"test",
-			date:d
-		});
-    
 	res.send(""+indexhtml); 
 });
 
@@ -70,10 +37,10 @@ app.get('/BH', function(req, res) {
 });
 
 app.get('/Wean', function(req, res) {
-	db.CFA.find(function(err, docs){
+	/*db.CFA.find(function(err, docs){
 		res.send(docs);
-	})
-    //res.send(""+Weanhtml);
+	});*/
+    res.send(""+Weanhtml);
 });
 
 app.get('/Hunt', function(req, res) {
