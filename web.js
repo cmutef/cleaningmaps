@@ -33,11 +33,6 @@ app.get('/', function(req, res) {
 			andrew:"test",
 			date:d
 		});
-		db.CFA.save({
-			name:"WEH5207-SCANNER",
-			andrew:"test",
-			date:d
-		});
 
 	res.send(""+indexhtml); 
 });
